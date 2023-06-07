@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes ateliers{% endblock %}
+
+{% block body %}
+
+    <section id="about">
+        <div class="sous-titre">
+            <h6>A propos de moi</h6>
+        </div>
+        <div class="about-container">
+            <div class="texte-about-1">
+                <h6>qui suis-je ?</h6>
+                <h3>Je m'appelle Marie Dumont</h3>
+                <p>Amoureuse de la créativité sous toutes ses formes, je célèbre l'art comme un moyen d'explorer et d'exprimer ses émotions, ses idées et sa vision unique du monde qui l'entoure.</p>
+            </div>
+            <img class="img-about-1" src="{{ asset('img/about/about-1.jpg') }}" alt="">
+            <img class="img-about-2" src="{{ asset('img/about/about-2.jpg') }}" alt="">
+            <div class="texte-about-2">
+                <p>Vitae turpis massa sed elementum tempus egestas. Duis ut diam quam nulla porttitor massa. Mauris a diam maecenas sed enim ut sem viverra. Lacus vestibulum sed arcu non odio.</p>
+                <p>Vitae turpis massa sed elementum tempus egestas. Duis ut diam quam nulla porttitor massa. Mauris a diam maecenas sed enim ut sem viverra. Lacus vestibulum sed arcu non odio.</p>
+            </div>
+        </div>
+        <p><a href="{{ path('app_contact') }}">Contactez-moi pour d'éventuelles question !</a></p>
+    </section>
+
+{% endblock %}

@@ -2,18 +2,31 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <title>{% block title %}Marie Créations{% endblock %}</title>
+
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+            <!-- Bootstrap -->
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+            <!-- icones -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+            <!-- Style css -->
+            <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+            <!-- fonts -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Tajawal:wght@300;400;500;700&family=Thasadith:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+    {% include 'partials/navbar.html.twig' %}
+        {% block body %}
+        {% endblock %}
+    {% include 'partials/footer.html.twig' %}
+
+        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     </body>
 </html>

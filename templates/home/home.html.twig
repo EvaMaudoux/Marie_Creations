@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+{% block body %}
+
+    <main class="home-container">
+        <!-- section hero -->
+        <section class="hero">
+            <img class="img1" src="{{ asset('img/home/background-hero-img1.jpg') }}" alt="background-hero">
+            <img class="img2" src="{{ asset('img/home/background-hero-img2.jpg') }}" alt="background-hero">
+            <div class="texte-hero-container text-center">
+                <h4>révélez l'artiste en vous !</h4>
+                <h1>Les Ateliers & Créations de Marie</h1>
+                <p>Plongez dans un univers d'expression artistique et de découverte, où chaque atelier est une invitation à explorer votre potentiel créatif.</p>
+            </div>
+        </section>
+
+        <!-- section créations -->
+        <section class="creations">
+            <div class="section-container">
+                <h2>Mes dernières créations</h2>
+                <h3 class="baseline">La créativité, c’est l’intelligence qui s’amuse !<br><span>- Albert Einstein</span></h3>
+                <div class="creations-container">
+                    <div class="card card-1" style="height: 550px;">
+                        <img class="card-img-top" style="height: 400px;" src="{{  asset('img/home/last-creation.jpg') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-text">peinture</h4>
+                            <h3 class="card-title">La valse des couleurs</h3>
+                            <a href="{{ path('app_creation') }}" class="btn btn-primary">voir plus</a>
+                        </div>
+                    </div>
+                    <div class="card card-2" style="height: 550px;">
+                        <img class="card-img-top" style="height: 400px;" src="{{  asset('img/home/last-creation.jpg') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-text">peinture</h4>
+                            <h3 class="card-title">la valse des couleurs</h3>
+                            <a href="{{ path('app_creation') }}" class="btn btn-primary">voir plus</a>
+                        </div>
+                    </div>
+                    <div class="card card-3" style="height: 550px;">
+                        <img class="card-img-top" style="height: 400px;" src="{{  asset('img/home/last-creation.jpg') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-text">peinture</h4>
+                            <h3 class="card-title">la valse des couleurs</h3>
+                            <a href="{{ path('app_creation') }}" class="btn btn-primary">voir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <p><a class="btn-section" href="{{ path('app_creations') }}">Voir toutes mes créations</a></p>
+            </div>
+        </section>
+
+        <!-- section ateliers -->
+        <section class="ateliers">
+            <div class="section-container">
+            <h2>Mes ateliers</h2>
+            <h3 class="baseline">Venez révéler et exprimer votre créativité !</h3>
+            <div class="atelier-container">
+                <img src="{{  asset('img/home/img-ateliers.jpg') }}" alt="">
+                <div class="descr-ateliers">
+                    <p>Je vous propose par le biais d'ateliers conviviaux de vous aider à faire place à votre imagination et de vous guider vers vos valeurs artistiques qui sommeillent en chacun d'entre nous.<br><br>Débutants ou avertis, vous serez agréablement surpris !</p>
+                </div>
+            </div>
+            <p class="text-center"><a class="btn-section">En savoir plus sur les ateliers</a></p>
+            </div>
+        </section>
+
+        <!-- section blog -->
+        <section class="articles">
+            <div class="section-container">
+            <h2>Les derniers articles du blog</h2>
+            <h3 class="baseline">Gardez un œil sur les dernières actualités et événements artistiques de mon blog ! </h3>
+            <div class="grid-container">
+                <div class="articles-container">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-5" >
+                                    <img style="border-radius: 0; height:350px;" src="{{ asset ('img/home/article-1.jpg') }}" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-7 card-body">
+                                    <h4>événement artistique</h4>
+                                    <h3 class="card-title">Exposition des jeunes talents</h3>
+                                    <p>L'art est un formidable moyen d'expression pour les jeunes talents en quête de reconnaissance et d'épanouissement [...]</p>
+                                    <a href="{{ path('app_article') }}" class="btn btn-primary">lire l'article</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-md-5" >
+                                    <img style="border-radius: 0; height:350px;" src="{{ asset ('img/home/article-2.jpg') }}" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-7 card-body">
+                                    <h4>techniques et astuces</h4>
+                                    <h3 class="card-title">Le Craft en lumière</h3>
+                                    <p>Je vous propose d'explorer les techniques et astuces du craft. Le craft, du mot anglais signifiant "artisanat", fait référence à la conception [...]</p>
+                                    <a href="{{ path('app_article') }}" class="btn btn-primary">lire l'article</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <p class="text-center"><a class="btn-section" href="{{ path('app_blog') }}">En savoir plus sur les ateliers</a></p>
+            </div>
+         </section>
+    </main>
+{% endblock %}

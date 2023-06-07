@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes créations{% endblock %}
+
+{% block body %}
+    <main class="creations-container">
+        <section class="creations">
+            <div class="sous-titre">
+                <h6>mes créations</h6>
+            </div>
+            <div class="categorie-creation">
+                <a href="">toutes</a>
+                <a href="">peinture</a>
+                <a href="">céramique</a>
+                <a href="">bijoux</a>
+                <a href="">scrapbooking</a>
+                <a href="">powertex</a>
+            </div>
+            <div class="container">
+                <div class="grid-container">
+                    <div class="galerie-item">
+                        <a href="{{ path('app_creation') }}">
+                            <img src="{{ asset ('img/galerie/1.jpg') }}" alt="">
+                        </a>
+                    </div>
+                    <div class="galerie-item">
+                        <a href="">
+                            <img src="{{ asset ('img/galerie/2.jpg') }}" alt="">
+                        </a>
+                    </div>
+                    <div class="galerie-item">
+                        <a href="">
+                            <img src="{{ asset ('img/galerie/3.jpg') }}" alt="">
+                        </a>
+                    </div>
+                    <div class="galerie-item">
+                        <a href="">
+                            <img src="{{ asset ('img/galerie/4.jpg')}}" alt="">
+                        </a>
+                    </div>
+                    <div class="galerie-item">
+                        <a href="">
+                            <img src="{{ asset ('img/galerie/5.jpg') }}" alt="">
+                        </a>
+                    </div>
+                    <div class="galerie-item">
+                        <a href="">
+                            <img src="{{ asset('img/galerie/6.jpg')}}" alt="">
+                        </a>
+                    </div>
+                    <div class="galerie-item">
+                        <a href="">
+                            <img src="{{ asset('img/galerie/7.jpg') }}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+{% endblock %}

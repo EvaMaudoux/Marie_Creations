@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article blog{% endblock %}
+
+{% block body %}
+
+    <main class="article-container">
+        <section class="details">
+            <div class="flex-container">
+                <div class="article">
+                    <img style="height: 600px; width: 100%;" src="{{ asset ('img/blog/1.jpg') }}" alt="">
+                    <div class="article-header">
+                        <h6>Evènements artistiques</h6>
+                        <h1>Les artisans à l'honneur</h1>
+                        <h2>Une exposition captivante célébrant la créativité et le talent des peintres locaux</h2>
+                        <p>12.05.2023</p>
+                    </div>
+                    <div class="article-body">
+                        <h3>Artistes à l’affiche</h3>
+                        <p>Aliquam pharetra fermentum ante vitae euismod. Mauris malesuada auctor risus. Aenean at ex quis lorem ullamcorper consectetur quis eu elit. Nullam sodales suscipit nibh, eu consectetur neque euismod sed. Mauris accumsan non est ut tempor. Morbi accumsan purus enim. Praesent lacinia diam tincidunt dui feugiat viverra. Vestibulum eget auctor lacus. Quisque interdum hendrerit porta. Sed et faucibus arcu, ac sollicitudin diam. Praesent congue interdum justo quis venenatis. Donec a faucibus erat. Nunc lobortis ultrices mi.</p>
+                        <h4>Week-end mémorable</h4>
+                        <p>Aliquam pharetra fermentum ante vitae euismod. Mauris malesuada auctor risus. Aenean at ex quis lorem ullamcorper consectetur quis eu elit. Nullam sodales suscipit nibh, eu consectetur neque euismod sed. Mauris accumsan non est ut tempor. Morbi accumsan purus enim. Praesent lacinia diam tincidunt dui feugiat viverra. Vestibulum eget auctor lacus. Quisque interdum hendrerit porta. Sed et faucibus arcu, ac sollicitudin diam. Praesent congue interdum justo quis venenatis. Donec a faucibus erat. Nunc lobortis ultrices mi.</p>
+                        <h4>Panorama créatif</h4>
+                        <p>Aliquam pharetra fermentum ante vitae euismod. Mauris malesuada auctor risus. Aenean at ex quis lorem ullamcorper consectetur quis eu elit. Nullam sodales suscipit nibh, eu consectetur neque euismod sed. Mauris accumsan non est ut tempor. Morbi accumsan purus enim. Praesent lacinia diam tincidunt dui feugiat viverra. Vestibulum eget auctor lacus. Quisque interdum hendrerit porta. Sed et faucibus arcu, ac sollicitudin diam. Praesent congue interdum justo quis venenatis. Donec a faucibus erat. Nunc lobortis ultrices mi.</p>
+                    </div>
+                    <div class="comment-area">
+                        <div class="last-comments">
+                            <h2>2 commentaires</h2>
+                            <div class="item">
+                                <h2>Jeanne</h2>
+                                <h3>30 mai 2023 à 20 h 29 min</h3>
+                                <p>Waouh! Super article je suis comblée !!!</p>
+                            </div>
+                            <div class="item">
+                                <h2>Laurent</h2>
+                                <h3>15 mai 2023 à 15 h 03 min</h3>
+                                <p>Très décu. Je ne m'attendais pas à ça.</p>
+                            </div>
+                        </div>
+                        <div class="new-comment">
+                            <h2>Laisser un commentaire</h2>
+                            <form action="">
+                                <div>
+                                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+                                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                                </div>
+                                <textarea id="message" name="message" placeholder="Votre commentaire" rows="3" cols="60" required></textarea>
+                                <input class="submit" type="submit" value="envoyer">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="others-articles">
+                    <h2>Derniers articles</h2>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/7.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/6.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/5.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/1.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/2.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/3.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/2.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/3.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/4.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/5.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/6.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <img style="height: 150px; width: 100%;" src="{{ asset ('img/blog/7.jpg') }}" alt="">
+                                <h2>Les artisans à l'honneur : une exposition captivante</h2>
+                            </a>
+                        </div>
+                </div>
+                    </div>
+            <p><a class="btn-redirection" href="{{ path('app_blog') }}">Retour au blog</a></p>
+        </section>
+    </main>
+
+{% endblock %}

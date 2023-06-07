@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon blog{% endblock %}
+
+{% block body %}
+    <main class="blog-container">
+        <section class="blog">
+            <div class="sous-titre">
+                <h6>mon blog</h6>
+            </div>
+            <div class="articles-container">
+                    <div class="row-articles">
+                        <div class="article">
+                            <a href="{{ path('app_article') }}">
+                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/1.jpg') }}" alt="">
+                            </a>
+                            <div class="article-texte">
+                                <h6>peinture acrylique</h6>
+                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
+                                <p>02.10.2022</p>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="">
+                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/2.jpg') }}" alt="">
+                            </a>
+                            <div class="article-texte">
+                                <h6>peinture acrylique</h6>
+                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
+                                <p>02.10.2022</p>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="">
+                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/3.jpg') }}" alt="">
+                            </a>
+                            <div class="article-texte">
+                                <h6>peinture acrylique</h6>
+                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
+                                <p>02.10.2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-articles">
+                        <div class="article">
+                            <a href="">
+                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/4.jpg') }}" alt="">
+                            </a>
+                            <div class="article-texte">
+                                <h6>peinture acrylique</h6>
+                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
+                                <p>02.10.2022</p>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="">
+                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/5.jpg') }}" alt="">
+                            </a>
+                            <div class="article-texte">
+                                <h6>peinture acrylique</h6>
+                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
+                                <p>02.10.2022</p>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <a href="">
+                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/6.jpg') }}" alt="">
+                            </a>
+                            <div class="article-texte">
+                                <h6>peinture acrylique</h6>
+                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
+                                <p>02.10.2022</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <p><a href="">Voir plus d'articles</a></p>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{parent() }} - contactez-moi {% endblock %}
+
+{% block body %}
+    <main class="contact">
+        <div class="grid-container">
+            <div class="bg-contact"></div>
+            <div class="contact-container">
+                <div class="form-contact">
+                    <h1>Restons en contact</h1>
+                    <p>N’hésitez pas à me contacter pour toute question, demande d'information ou inscription aux ateliers via le formulaire ci-dessous.</p>
+                    <form action="">
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+                        <textarea id="message" name="message" placeholder="Votre message" rows="3" cols="50" required></textarea>
+                        <input class="submit" type="submit" value="envoyer">
+                        <div class="infos">
+                            <div class="phone">
+                                <i class="fas fa-phone"></i>
+                                <p>0478 25 22 14</p>
+                            </div>
+                            <div class="mail">
+                                <i class="fas fa-envelope"></i>
+                                <p>marie_creations@gmail.com</p>
+                            </div>
+                            <div class="adress">
+                                <i class="fas fa-home"></i>
+                                <p>Rue de la croix, 5 <br> 5000 Namur</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="map">
+                    <img src="{{ asset('img/map.jpg') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
