@@ -8,6 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PageController extends AbstractController
 {
+    /** page à propos
+     * @return Response
+     */
     #[Route('/a-propos', name: 'app_about')]
     public function about(): Response
     {

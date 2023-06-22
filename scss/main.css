@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.h4-desktop, footer div h1, .contact .grid-container .contact-container .form-contact h1, .register .form-register h1, .register .form-login h1, .login .form-register h1, .login .form-login h1, #about .texte-about-1 h3, .article-container .flex-container .article .article-body h3, .blog-container .blog .articles-container .row-articles .article .article-texte h2, .ateliers .atelier-container-v2 h2, .ateliers .atelier-container-v1 h2, .ateliers #hero-container .hero-ateliers h3 {
+.h4-desktop, footer div h1, .contact .grid-container .contact-container .form-contact h1, .register .form-register h1, .register .form-login h1, .login .form-register h1, .login .form-login h1, #about .texte-about-1 h3, .article-container .flex-container .article .article-body h3, .blog-container .blog .articles-container .row-articles .article .article-texte h2, .ateliers .atelier-container:nth-child(even) h2, .ateliers .atelier-container:nth-child(odd) h2, .ateliers #hero-container .hero-ateliers h3 {
   font-family: "Noto Serif Display", serif;
   font-size: 40px;
   font-weight: 300;
@@ -15,7 +15,7 @@
   font-style: italic;
 }
 
-.h4-uppercase, .creation-container .details .creation .card-body h4, .home-container .articles .grid-container .articles-container .card-body h4, .home-container .creations .creations-container .card .card-body h4, .home-container .hero .texte-hero-container h4, .sous-titre, .btn-section, #about > p a, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a, .btn-desktop, footer .newsletter .inscription button, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
+.h4-uppercase, .creation-container .details .creation .card-body h4, .creations .categorie-creation li, .home-container .articles .grid-container .articles-container .card-body h4, .home-container .creations .creations-container .card .card-body h4, .home-container .hero .texte-hero-container h4, .sous-titre, .btn-section, #about > p a, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a, .btn-desktop, footer .newsletter .inscription button, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
   font-family: "Thasadith", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -40,7 +40,7 @@
   font-style: italic;
 }
 
-.h6-desktop, .contact .grid-container .contact-container .form-contact form .submit, .register .form-register form .submit, .register .form-login form .submit, .login .form-register form .submit, .login .form-login form .submit, #about .texte-about-1 h6, .article-container .flex-container .article .comment-area .new-comment form .submit, .article-container .flex-container .article .article-header h6, .blog-container .blog .articles-container .row-articles .article .article-texte h6, .ateliers #hero-container .hero-ateliers h6, .creations-container .creations .categorie-creation a, .navbar a {
+.h6-desktop, .contact .grid-container .contact-container .form-contact form .submit, .register .form-register form .submit, .register .form-login form .submit, .login .form-register form .submit, .login .form-login form .submit, #about .texte-about-1 h6, .article-container .flex-container .article .comment-area .new-comment form .submit, .article-container .flex-container .article .article-header h6, .blog-container .blog .articles-container .row-articles .article .article-texte h6, .ateliers #hero-container .hero-ateliers h6, .navbar a {
   font-family: "Thasadith", sans-serif;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -49,7 +49,7 @@
   text-decoration: none;
 }
 
-.paragraphe-desktop, .conditions .liens p, footer .newsletter .inscription form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .contact .grid-container .contact-container .form-contact form input, .contact .grid-container .contact-container .form-contact form textarea, .contact .grid-container .contact-container .form-contact p, .register .form-register form input, .register .form-login form input, .login .form-register form input, .login .form-login form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .comment-area .new-comment form textarea, .article-container .flex-container .article .comment-area .last-comments .item p, .article-container .flex-container .article .comment-area .last-comments .item h3, .article-container .flex-container .article .comment-area .last-comments .item > h2, .article-container .flex-container .article .article-body p, .article-container .flex-container .article .article-header p, .blog-container .blog .articles-container .row-articles .article .article-texte p, .ateliers .atelier-container-v2 .atelier-v2 .texte-atelier-container-v2 p, .ateliers .atelier-container-v1 .atelier-v1 .texte-atelier-container-v1 p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
+.paragraphe-desktop, .conditions .liens p, footer .newsletter .inscription form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .contact .grid-container .contact-container .form-contact form input, .contact .grid-container .contact-container .form-contact form textarea, .contact .grid-container .contact-container .form-contact p, .register .form-register form input, .register .form-login form input, .login .form-register form input, .login .form-login form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .comment-area .new-comment form textarea, .article-container .flex-container .article .comment-area .last-comments .item p, .article-container .flex-container .article .comment-area .last-comments .item h3, .article-container .flex-container .article .comment-area .last-comments .item > h2, .article-container .flex-container .article .article-body p, .article-container .flex-container .article .article-header p, .blog-container .blog .articles-container .row-articles .article .article-texte p, .ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p, .ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
   font-family: "Tajawal", sans-serif;
   font-weight: 200;
   font-size: 20px;
@@ -134,7 +134,10 @@
 .navbar #a-propos {
   grid-column: 7/8;
 }
-.navbar #connexion {
+.navbar #login {
+  grid-column: 8/9;
+}
+.navbar #logout {
   grid-column: 8/9;
 }
 .navbar .logo-container {
@@ -217,6 +220,9 @@
 .home-container .section-container {
   margin: 0 6rem;
 }
+.home-container .section-container .creations-container {
+  margin: 0;
+}
 .home-container .creations {
   background-color: #DBD2C3;
   padding: 3rem 2rem 1rem 2rem;
@@ -259,19 +265,19 @@
 .home-container .creations .creations-container .card .card-body h4 {
   padding-bottom: 1rem;
   letter-spacing: 2px;
-  font-size: 15px;
+  font-size: 14px;
 }
 .home-container .creations .creations-container .card .card-body > h3 {
   font-size: 22px;
   padding-bottom: 1.2rem;
 }
-.home-container .creations .creations-container .card-1 {
+.home-container .creations .creations-container .card:first-of-type {
   grid-column: 5/10;
 }
-.home-container .creations .creations-container .card-2 {
+.home-container .creations .creations-container .card:nth-of-type(2) {
   grid-column: 11/16;
 }
-.home-container .creations .creations-container .card-3 {
+.home-container .creations .creations-container .card:last-of-type {
   grid-column: 17/22;
 }
 
@@ -398,48 +404,31 @@
 }
 
 /* page galerie des créations */
-.creations-container .creations .categorie-creation {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin: 3rem;
+.creations .categorie-creation {
+  margin: 1.5rem;
 }
-.creations-container .creations .categorie-creation a {
+.creations .categorie-creation li {
+  letter-spacing: 3px;
+  font-size: 14px;
   color: #5E604B;
   padding: 10px 25px;
+  margin: 0 10px;
+  border: none;
 }
-.creations-container .creations .categorie-creation a:hover {
+.creations .categorie-creation li:hover {
   background-color: #F0EDE6;
   border-radius: 8px;
 }
-.creations-container .creations .container {
+.creations .filter-container {
   display: flex;
-  justify-content: center;
-  margin-bottom: 8rem;
+  flex-wrap: wrap;
+  width: 1000px;
 }
-.creations-container .creations .container .grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 500px);
-  grid-template-rows: repeat(5, 400px);
-  grid-gap: 15px;
+.creations .filter-container .filtr-item {
+  padding: 1.2rem 0;
 }
-.creations-container .creations .container .grid-container img {
+.creations .filter-container .filtr-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.creations-container .creations .container .grid-container .galerie-item:nth-child(1) {
-  grid-column: 1/span 1;
-  grid-row: 1/span 2;
-}
-.creations-container .creations .container .grid-container .galerie-item:nth-child(5) {
-  grid-column: 2/span 1;
-  grid-row: 2/span 2;
-}
-.creations-container .creations .container .grid-container .galerie-item:nth-child(3) {
-  grid-column: 1/span 1;
-  grid-row: 4/span 2;
 }
 
 /* page détails création */
@@ -527,13 +516,13 @@
   grid-column: 7/11;
   grid-row: 3/9;
 }
-.ateliers .atelier-container-v1 {
+.ateliers .atelier-container:nth-child(odd) {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(9, 1fr);
   height: 550px;
 }
-.ateliers .atelier-container-v1 h2 {
+.ateliers .atelier-container:nth-child(odd) h2 {
   grid-column: 3/11;
   grid-row: 2/3;
   font-size: 37px;
@@ -544,21 +533,20 @@
   border-left: 3px solid #B6A385;
   align-self: center;
 }
-.ateliers .atelier-container-v1 .atelier-v1 {
-  color: #34352A;
+.ateliers .atelier-container:nth-child(odd) .atelier {
   grid-column: 3/11;
   grid-row: 4/9;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 1fr;
 }
-.ateliers .atelier-container-v1 .atelier-v1 .img-atelier-v1 {
+.ateliers .atelier-container:nth-child(odd) .atelier .img-atelier {
   grid-column: 1/3;
   grid-row: 1/2;
   width: 100%;
   height: 100%;
 }
-.ateliers .atelier-container-v1 .atelier-v1 .texte-atelier-container-v1 {
+.ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container {
   grid-column: 3/9;
   display: flex;
   flex-direction: column;
@@ -566,23 +554,23 @@
   text-align: justify;
   padding-left: 4rem;
 }
-.ateliers .atelier-container-v1 .atelier-v1 .texte-atelier-container-v1 p {
+.ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p {
   margin: 0;
   letter-spacing: 1px;
   line-height: 1.6;
   font-size: 21px;
 }
-.ateliers .atelier-container-v1 .atelier-v1 .texte-atelier-container-v1 p span {
+.ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p span {
   color: #B6A385;
   font-weight: bolder;
 }
-.ateliers .atelier-container-v2 {
+.ateliers .atelier-container:nth-child(even) {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(9, 1fr);
   height: 550px;
 }
-.ateliers .atelier-container-v2 h2 {
+.ateliers .atelier-container:nth-child(even) h2 {
   grid-column: 3/11;
   grid-row: 2/3;
   font-size: 37px;
@@ -593,21 +581,20 @@
   border-left: 3px solid #B6A385;
   align-self: center;
 }
-.ateliers .atelier-container-v2 .atelier-v2 {
-  color: #34352A;
+.ateliers .atelier-container:nth-child(even) .atelier {
   grid-column: 3/11;
   grid-row: 4/9;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 1fr;
 }
-.ateliers .atelier-container-v2 .atelier-v2 .img-atelier-v2 {
+.ateliers .atelier-container:nth-child(even) .atelier .img-atelier {
   grid-column: 7/9;
   grid-row: 1/2;
   width: 100%;
   height: 100%;
 }
-.ateliers .atelier-container-v2 .atelier-v2 .texte-atelier-container-v2 {
+.ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container {
   grid-column: 1/7;
   display: flex;
   flex-direction: column;
@@ -615,46 +602,48 @@
   text-align: justify;
   padding-right: 4rem;
 }
-.ateliers .atelier-container-v2 .atelier-v2 .texte-atelier-container-v2 p {
+.ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p {
   margin: 0;
   font-size: 21px;
   letter-spacing: 1px;
   line-height: 1.6;
 }
-.ateliers .atelier-container-v2 .atelier-v2 .texte-atelier-container-v2 p span {
+.ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p span {
   color: #B6A385;
   font-weight: bolder;
 }
-.ateliers .ceramique {
+.ateliers .ateliers-container .atelier-container:nth-child(1) {
   background-color: #F0EDE6;
 }
-.ateliers .ceramique h2 {
-  color: #B6A385;
-  border-left: 3px solid #DBD2C3;
+.ateliers .ateliers-container .atelier-container:nth-child(1) h2 {
+  color: #5E604B;
+  border-left: 3px solid #B6A385;
 }
-.ateliers .peinture {
+.ateliers .ateliers-container .atelier-container:nth-child(2) {
   background-color: #DBD2C3;
 }
-.ateliers .bijoux {
+.ateliers .ateliers-container .atelier-container:nth-child(3) {
   background-color: #5E604B;
 }
-.ateliers .bijoux h2 {
+.ateliers .ateliers-container .atelier-container:nth-child(3) h2 {
   color: #F0EDE6;
 }
-.ateliers .bijoux p {
+.ateliers .ateliers-container .atelier-container:nth-child(3) p {
   color: #F0EDE6;
 }
-.ateliers .scrapbooking {
+.ateliers .ateliers-container .atelier-container:nth-child(4) {
   background-color: #DBD2C3;
 }
-.ateliers .powertex {
+.ateliers .ateliers-container .atelier-container:nth-child(5) {
   background-color: #F0EDE6;
+  color: #5E604B;
 }
-.ateliers .powertex h2 {
-  color: #B6A385;
-  border-left: 3px solid #DBD2C3;
+.ateliers .ateliers-container .atelier-container:nth-child(5) h2 {
+  color: #5E604B;
+  border-left: 3px solid #B6A385;
 }
 
+/* agenda des ateliers */
 /*  page blog  */
 .blog-container .blog {
   color: #34352A;

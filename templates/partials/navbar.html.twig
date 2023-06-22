@@ -1,10 +1,14 @@
 <nav class="navbar">
-        <a id="accueil" href="{{ path('app_home') }}">accueil</a>
-        <a id="creations" href="{{ path('app_creations') }}">créations</a>
-        <a id="ateliers" href="{{ path('app_ateliers') }}">ateliers</a>
-        <a id="blog" href="{{ path('app_blog') }}">blog</a>
-        <a id="a-propos" href="{{ path('app_about') }}">a propos</a>
-        <a id="connexion" href="{{ path('app_login') }}">se connecter</a>
+    <a id="accueil" href="{{ path('app_home') }}">accueil</a>
+    <a id="creations" href="{{ path('app_creations') }}">créations</a>
+    <a id="ateliers" href="{{ path('app_workshop') }}">ateliers</a>
+    <a id="blog" href="{{ path('app_blog') }}">blog</a>
+    <a id="a-propos" href="{{ path('app_about') }}">a propos</a>
+    {% if not app.user %}
+        <a href="{{ path('app_login') }}" type="button" id="login">S'identifier</a>
+    {% else %}
+        <a href="{{ path('app_logout') }}" type="button" id="logout">se déconnecter</a>
+    {% endif %}
     <div class="logo-container">
         <h1>Ateliers</h1>
         <hr class="horizontal-line">

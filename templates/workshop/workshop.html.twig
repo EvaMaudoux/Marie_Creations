@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes ateliers{% endblock %}
+
+{% block body %}
+
+    <section class="ateliers">
+        <div class="sous-titre">
+            <h6>mes ateliers</h6>
+        </div>
+        <div id="hero-container">
+            <div class="background-hero"></div>
+            <div class="hero-ateliers">
+                <h6>ma mission</h6>
+                <h3>Offrir des ateliers créatifs où l'apprentissage se fait avec plaisir. Ici, on explore de nouvelles techniques artistiques dans une ambiance amusante.</h3>
+            </div>
+            <img src="{{ asset('img/workshops/ateliers-hero.jpg') }}" alt="">
+        </div>
+        <div class="ateliers-container">
+            {% for workshop in workshops %}
+                <div class="atelier-container">
+                    <h2>{{ workshop.name | capitalize}}</h2>
+                    <div class="atelier">
+                        <img class="img-atelier" src="{{ asset('img/workshops/' ~ workshop.imageName) }}" alt="{{  workshop.imageName }}">
+                        <div class="texte-atelier-container">
+                            <p>{{  workshop.description }}</p>
+                            <p><span>Prix</span> : {{  workshop.price }} euros </p>
+                            <p><span>Quand</span> ? Jetez un oeil à mon agenda</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}
