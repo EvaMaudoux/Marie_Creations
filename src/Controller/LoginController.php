@@ -21,8 +21,8 @@ class LoginController extends AbstractController
     }
 
     #[Route('/logout', name: 'app_logout', methods: ['GET'])]
-    public function logout()
+    public function logout(): Response
     {
-
+        return $this->render('home/home.html.twig');
     }
 }

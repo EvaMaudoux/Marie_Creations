@@ -2,16 +2,29 @@
     <a id="accueil" href="{{ path('app_home') }}">accueil</a>
     <a id="creations" href="{{ path('app_creations') }}">créations</a>
     <a id="ateliers" href="{{ path('app_workshop') }}">ateliers</a>
-    <a id="blog" href="{{ path('app_blog') }}">blog</a>
-    <a id="a-propos" href="{{ path('app_about') }}">a propos</a>
-    {% if not app.user %}
-        <a href="{{ path('app_login') }}" type="button" id="login">S'identifier</a>
-    {% else %}
-        <a href="{{ path('app_logout') }}" type="button" id="logout">se déconnecter</a>
-    {% endif %}
     <div class="logo-container">
         <h1>Ateliers</h1>
         <hr class="horizontal-line">
         <h1>Créations</h1>
     </div>
+    <a id="blog" href="{{ path('app_blog') }}">blog</a>
+    <a id="a-propos" href="{{ path('app_about') }}">a propos</a>
+    {% if not app.user %}
+        <a href="{{ path('app_login') }}" type="button" id="login">S'identifier</a>
+    {% else %}
+        <a href="{{ path('app_contact') }}">contact</a>
+        <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ app.user.firstName }} {{ app.user.lastName }}
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ path('app_profile') }}">Mon profil</a></li>
+                <li><a class="dropdown-item" href="">Mes réservations</a></li>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li><a href="" class="dropdown-item">Administration</a></li>
+                {% endif %}
+                <li><a href="{{path('app_logout')}}" class="dropdown-item">Se déconnecter</a></li>
+            </ul>
+        </div>
+    {% endif %}
 </nav>

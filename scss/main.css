@@ -15,7 +15,7 @@
   font-style: italic;
 }
 
-.h4-uppercase, .creation-container .details .creation .card-body h4, .creations .categorie-creation li, .home-container .articles .grid-container .articles-container .card-body h4, .home-container .creations .creations-container .card .card-body h4, .home-container .hero .texte-hero-container h4, .sous-titre, .btn-section, #about > p a, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a, .btn-desktop, footer .newsletter .inscription button, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
+.h4-uppercase, .creation-container .details .creation .card-body h4, .creations .categorie-creation li, .home-container .articles .grid-container .articles-container .card-body h4, .home-container .creations .creations-container .card .card-body h4, .home-container .hero .texte-hero-container h4, .sous-titre, .btn-section, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a, .btn-desktop, footer .newsletter .inscription button, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
   font-family: "Thasadith", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -24,7 +24,7 @@
   text-decoration: none;
 }
 
-.h2, .article-container .flex-container .others-articles > h2, .article-container .flex-container .article .article-header h2, .article-container .flex-container .article .article-header h1, .creation-container .details .creation .card-body h2, .home-container .articles h2, .home-container .ateliers .section-container h2, .home-container .creations h2 {
+.h2, #about > p a, .article-container .flex-container .others-articles > h2, .article-container .flex-container .article .article-header h2, .article-container .flex-container .article .article-header h1, .creation-container .details .creation .card-body h2, .home-container .articles h2, .home-container .ateliers .section-container h2, .home-container .creations h2 {
   font-family: "Noto Serif Display", serif;
   font-size: 40px;
   font-weight: 300;
@@ -40,7 +40,7 @@
   font-style: italic;
 }
 
-.h6-desktop, .contact .grid-container .contact-container .form-contact form .submit, .register .form-register form .submit, .register .form-login form .submit, .login .form-register form .submit, .login .form-login form .submit, #about .texte-about-1 h6, .article-container .flex-container .article .comment-area .new-comment form .submit, .article-container .flex-container .article .article-header h6, .blog-container .blog .articles-container .row-articles .article .article-texte h6, .ateliers #hero-container .hero-ateliers h6, .navbar a {
+.h6-desktop, .contact .grid-container .contact-container .form-contact .form .submit, .register .form-register form .submit, .register .form-login form .submit, .login .form-register form .submit, .login .form-login form .submit, #about .texte-about-1 h6, .article-container .flex-container .article .comment-area .new-comment form .submit, .article-container .flex-container .article .article-header h6, .blog-container .blog .articles-container .row-articles .article .article-texte h6, .ateliers #hero-container .hero-ateliers h6, .navbar a {
   font-family: "Thasadith", sans-serif;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -49,7 +49,7 @@
   text-decoration: none;
 }
 
-.paragraphe-desktop, .conditions .liens p, footer .newsletter .inscription form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .contact .grid-container .contact-container .form-contact form input, .contact .grid-container .contact-container .form-contact form textarea, .contact .grid-container .contact-container .form-contact p, .register .form-register form input, .register .form-login form input, .login .form-register form input, .login .form-login form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .comment-area .new-comment form textarea, .article-container .flex-container .article .comment-area .last-comments .item p, .article-container .flex-container .article .comment-area .last-comments .item h3, .article-container .flex-container .article .comment-area .last-comments .item > h2, .article-container .flex-container .article .article-body p, .article-container .flex-container .article .article-header p, .blog-container .blog .articles-container .row-articles .article .article-texte p, .ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p, .ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
+.paragraphe-desktop, .conditions .liens p, footer .newsletter .inscription form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .contact .grid-container .contact-container .form-contact .form input, .contact .grid-container .contact-container .form-contact .form textarea, .contact .grid-container .contact-container .form-contact p, .error-message, .register .form-register form input, .register .form-login form input, .login .form-register form input, .login .form-login form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .comment-area .new-comment form textarea, .article-container .flex-container .article .comment-area .last-comments .item p, .article-container .flex-container .article .comment-area .last-comments .item h3, .article-container .flex-container .article .comment-area .last-comments .item > h2, .article-container .flex-container .article .article-body p, .article-container .flex-container .article .article-header p, .blog-container .blog .articles-container .row-articles .article .article-texte p, .ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p, .ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
   font-family: "Tajawal", sans-serif;
   font-weight: 200;
   font-size: 20px;
@@ -74,7 +74,7 @@
   padding: 0.4rem 1rem;
 }
 
-.btn-section, #about > p a, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a {
+.btn-section, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
@@ -84,7 +84,7 @@
   border-bottom: 2px solid #F0EDE6;
   transition: background-color 0.5s;
 }
-.btn-section:hover, #about > p a:hover, .article-container .details > p a:hover, .blog-container .blog > p a:hover, .creation-container .details p:last-child a:hover, .home-container .ateliers .section-container p:last-child a:hover, .home-container .creations p a:hover {
+.btn-section:hover, .article-container .details > p a:hover, .blog-container .blog > p a:hover, .creation-container .details p:last-child a:hover, .home-container .ateliers .section-container p:last-child a:hover, .home-container .creations p a:hover {
   background-color: #F0EDE6;
   padding: 0.8rem 1.6rem;
 }
@@ -110,38 +110,43 @@
 .navbar {
   height: 150px;
   background-color: #F0EDE6;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   text-align: center;
 }
 .navbar a {
   color: #5E604B;
-  grid-row: 1;
 }
-.navbar #accueil {
-  grid-column: 1/2;
+.navbar .dropdown button {
+  background-color: #F0EDE6;
+  color: #5E604B;
+  padding: 0.7rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: capitalize;
 }
-.navbar #creations {
-  grid-column: 2/3;
+.navbar .dropdown button:hover {
+  background-color: #5E604B;
+  color: #F0EDE6;
 }
-.navbar #ateliers {
-  grid-column: 3/4;
+.navbar .dropdown-menu {
+  position: absolute;
+  right: 0;
+  left: auto;
+  margin-top: 1rem;
+  background-color: #F0EDE6;
+  padding: 0;
+  border-color: #5E604B;
 }
-.navbar #blog {
-  grid-column: 6/7;
+.navbar .dropdown-menu .dropdown-item {
+  padding: 12px 22px;
 }
-.navbar #a-propos {
-  grid-column: 7/8;
-}
-.navbar #login {
-  grid-column: 8/9;
-}
-.navbar #logout {
-  grid-column: 8/9;
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #5E604B;
+  color: #F0EDE6;
 }
 .navbar .logo-container {
-  grid-column: 4/6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -882,11 +887,14 @@
   margin-bottom: 4rem;
 }
 #about > p a {
-  font-weight: lighter;
+  text-decoration: none;
+  font-size: 25px;
+  letter-spacing: 3px;
   color: #5E604B;
 }
 #about > p a:hover {
   background-color: #F0EDE6;
+  padding: 10px 20px;
 }
 #about .about-container {
   display: grid;
@@ -966,9 +974,9 @@
 }
 .register .form-register h2, .register .form-login h2, .login .form-register h2, .login .form-login h2 {
   text-align: center;
+  margin-bottom: 3rem;
 }
 .register .form-register form, .register .form-login form, .login .form-register form, .login .form-login form {
-  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -988,6 +996,7 @@
   color: #5E604B;
 }
 .register .form-register form .submit, .register .form-login form .submit, .login .form-register form .submit, .login .form-login form .submit {
+  margin-top: 3rem;
   width: 50%;
   border: none;
   background-color: #5E604B;
@@ -1000,6 +1009,14 @@
 .register .form-register form div:last-child p a, .register .form-login form div:last-child p a, .login .form-register form div:last-child p a, .login .form-login form div:last-child p a {
   color: #5E604B;
   font-size: 15px;
+}
+.register .form-register form > div, .register .form-login form > div, .login .form-register form > div, .login .form-login form > div {
+  margin: 1rem;
+  width: 100%;
+  text-align: center;
+}
+.register .form-register form .btn-section, .register .form-register form .home-container .creations p a, .home-container .creations p .register .form-register form a, .register .form-register form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .register .form-register form a, .register .form-register form .creation-container .details p:last-child a, .creation-container .details p:last-child .register .form-register form a, .register .form-register form .blog-container .blog > p a, .blog-container .blog > p .register .form-register form a, .register .form-register form .article-container .details > p a, .article-container .details > p .register .form-register form a, .register .form-login form .btn-section, .register .form-login form .home-container .creations p a, .home-container .creations p .register .form-login form a, .register .form-login form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .register .form-login form a, .register .form-login form .creation-container .details p:last-child a, .creation-container .details p:last-child .register .form-login form a, .register .form-login form .blog-container .blog > p a, .blog-container .blog > p .register .form-login form a, .register .form-login form .article-container .details > p a, .article-container .details > p .register .form-login form a, .login .form-register form .btn-section, .login .form-register form .home-container .creations p a, .home-container .creations p .login .form-register form a, .login .form-register form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .login .form-register form a, .login .form-register form .creation-container .details p:last-child a, .creation-container .details p:last-child .login .form-register form a, .login .form-register form .blog-container .blog > p a, .blog-container .blog > p .login .form-register form a, .login .form-register form .article-container .details > p a, .article-container .details > p .login .form-register form a, .login .form-login form .btn-section, .login .form-login form .home-container .creations p a, .home-container .creations p .login .form-login form a, .login .form-login form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .login .form-login form a, .login .form-login form .creation-container .details p:last-child a, .creation-container .details p:last-child .login .form-login form a, .login .form-login form .blog-container .blog > p a, .blog-container .blog > p .login .form-login form a, .login .form-login form .article-container .details > p a, .article-container .details > p .login .form-login form a {
+  letter-spacing: 2.5px;
 }
 
 .login form input:nth-child(4) {
@@ -1016,8 +1033,18 @@
   padding-left: 1.6rem;
 }
 
+.error-message {
+  color: #B6A385;
+  font-size: 22px;
+  margin-top: 2rem;
+}
+
 .register form input:nth-child(4) {
   margin-bottom: 4rem;
+}
+
+.custom-error-message {
+  color: red;
 }
 
 /* contact */
@@ -1039,11 +1066,11 @@
   justify-content: center;
   align-items: center;
   gap: 6rem;
-  grid-column: 3/11;
+  grid-column: 2/11;
   grid-row: 1;
 }
 .contact .grid-container .contact-container .form-contact {
-  width: 40%;
+  color: #5E604B;
 }
 .contact .grid-container .contact-container .form-contact h1 {
   text-align: center;
@@ -1054,53 +1081,58 @@
   text-align: center;
   padding-bottom: 2rem;
 }
-.contact .grid-container .contact-container .form-contact form {
+.contact .grid-container .contact-container .form-contact .form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contact .grid-container .contact-container .form-contact form input, .contact .grid-container .contact-container .form-contact form textarea {
+.contact .grid-container .contact-container .form-contact .form form {
+  width: 70%;
+}
+.contact .grid-container .contact-container .form-contact .form input, .contact .grid-container .contact-container .form-contact .form textarea {
   outline: none;
   width: 100%;
   border: none;
   border-bottom: 1px solid #DBD2C3;
-  padding: 0.7rem 0;
-  margin: 1rem 0;
+  padding: 0.2rem 0;
+  margin: 1.5rem 0;
   color: #5E604B;
   letter-spacing: 1px;
 }
-.contact .grid-container .contact-container .form-contact form input::placeholder, .contact .grid-container .contact-container .form-contact form textarea::placeholder {
+.contact .grid-container .contact-container .form-contact .form input::placeholder, .contact .grid-container .contact-container .form-contact .form textarea::placeholder {
   color: #5E604B;
 }
-.contact .grid-container .contact-container .form-contact form .submit {
+.contact .grid-container .contact-container .form-contact .form .submit {
   width: 60%;
   border: none;
   background-color: #5E604B;
   text-align: center;
   color: #F0EDE6;
+  margin-left: 6.5rem;
+  padding: 10px 20px;
 }
-.contact .grid-container .contact-container .form-contact form .infos {
+.contact .grid-container .contact-container .form-contact .form .infos {
   padding: 1.5rem 0;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.contact .grid-container .contact-container .form-contact form .infos div {
+.contact .grid-container .contact-container .form-contact .form .infos div {
   padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contact .grid-container .contact-container .form-contact form .infos div i {
+.contact .grid-container .contact-container .form-contact .form .infos div i {
   font-size: 30px;
   padding-bottom: 1rem;
   color: #5E604B;
 }
-.contact .grid-container .contact-container .form-contact form .infos div p {
+.contact .grid-container .contact-container .form-contact .form .infos div p {
   font-size: 16px;
 }
-.contact .grid-container .contact-container .form-contact form .infos .adress p {
+.contact .grid-container .contact-container .form-contact .form .infos .adress p {
   line-height: 25px;
 }
 .contact .grid-container .contact-container .form-contact .map {

@@ -11,41 +11,48 @@
 .navbar {
   height:150px;
   background-color: $blanc;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   text-align: center;
   a {
     @extend .h6-desktop;
     color: $olive;
-    grid-row: 1;
   }
-    #accueil {
-      grid-column: 1/2;
+  .dropdown {
+    button {
+      background-color: $blanc;
+      color: $olive;
+      padding: .7rem;
+      border:none;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      &:hover {
+        background-color: $olive;
+        color: $blanc;
+      }
     }
-    #creations {
-      grid-column: 2/3;
-    }
-    #ateliers {
-      grid-column: 3/4;
-    }
-  #blog {
-    grid-column: 6/7;
-  }
-  #a-propos {
-    grid-column: 7/8;
-  }
-  #login {
-    grid-column:8/9;
   }
 
-  #logout {
-    grid-column:8/9;
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: auto;
+    margin-top: 1rem;
+    background-color: $blanc;
+    padding: 0;
+    border-color: $olive;
+    .dropdown-item {
+      padding: 12px 22px;
+      &:hover {
+        background-color: $olive;
+        color: $blanc;
+      }
+    }
   }
 
 
   .logo-container {
-    grid-column: 4/6;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -879,11 +886,14 @@
     margin-top: 6rem;
     margin-bottom: 4rem;
     a {
-      @extend .btn-section;
-      font-weight: lighter;
+      @extend .h2;
+      text-decoration: none;
+      font-size: 25px;
+      letter-spacing: 3px;
       color: $olive;
       &:hover {
         background-color: $blanc;
+        padding: 10px 20px
       }
     }
   }
@@ -971,12 +981,12 @@
     h2 {
       text-align: center;
       @extend .h5-desktop;
+      margin-bottom: 3rem;
     }
     p {
       @extend .paragraphe-desktop;
     }
     form {
-      padding: 2rem 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -996,6 +1006,7 @@
           letter-spacing: 1px;
         }
         .submit {
+          margin-top: 3rem;
           width: 50%;
           border: none;
           background-color: $olive;
@@ -1010,7 +1021,16 @@
           font-size: 15px;
         }
       }
+      > div {
+        margin: 1rem;
+        width: 100%;
+        text-align: center;
+      }
+      .btn-section {
+        letter-spacing: 2.5px;
+      }
     }
+
   }
 }
 
@@ -1030,11 +1050,20 @@
 
   }
 }
+.error-message {
+  color: $beige-fonce;
+  font-size: 22px;
+  @extend .paragraphe-desktop;
+  margin-top: 2rem;
+}
 
 .register form {
 input:nth-child(4) {
   margin-bottom: 4rem;
 }
+}
+.custom-error-message {
+  color: red;
 }
 
 /* contact */
@@ -1056,10 +1085,10 @@ input:nth-child(4) {
       justify-content: center;
       align-items: center;
       gap: 6rem;
-      grid-column: 3/11;
+      grid-column: 2/11;
       grid-row : 1;
       .form-contact {
-        width: 40%;
+        color: $olive;
         h1 {
           @extend .h4-desktop;
           text-align: center;
@@ -1071,7 +1100,10 @@ input:nth-child(4) {
           text-align: center;
           padding-bottom: 2rem;
         }
-        form {
+        .form {
+          form {
+            width: 70%;
+          }
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -1080,8 +1112,8 @@ input:nth-child(4) {
             width: 100%;
             border: none;
             border-bottom: 1px solid $beige-clair;
-            padding: .7rem 0;
-            margin: 1rem 0;
+            padding: .2rem 0;
+            margin: 1.5rem 0;
             &::placeholder {
               color: $olive;
             }
@@ -1096,13 +1128,15 @@ input:nth-child(4) {
             text-align: center;
             color: $blanc;
             @extend .h6-desktop;
+            margin-left: 6.5rem;
+            padding: 10px 20px;
           }
           .infos {
             padding: 1.5rem 0;
             width: 100%;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
             div {
               padding-top: 1.5rem;
               display: flex;

@@ -18,28 +18,28 @@ class RegistrationType extends AbstractType
     {
         $builder
             ->add('firstName', TextType::class, [
-                'label' => 'Votre prénom',
+                'label' => false,
                 'attr'  => [
-                    'placeholder' => 'prénom',
+                    'placeholder' => 'Prénom',
                 ]
             ])
             ->add('lastName', TextType::class, [
-                'label' => 'Votre nom',
+                'label' => false,
                 'attr'  => [
-                    'placeholder' => 'nom',
+                    'placeholder' => 'Nom',
                 ]
             ])
             ->add('email', EmailType::class, [
-                'label' => 'Votre Email',
+                'label' => false,
                 'attr' => [
-                    'placeholder' => 'email',
+                    'placeholder' => 'Email',
                 ]
             ])
             ->add('plainPassword', PasswordType::class, [
                 'mapped' => false,
-                'label' => 'Votre mot de passe',
+                'label' => false,
                 'attr' => ['autocomplete' => 'new-password',
-                    'placeholder' => 'mot de passe',
+                    'placeholder' => 'Mot de passe',
                 ],
                 'constraints' => [
                     new NotBlank([

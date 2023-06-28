@@ -1,0 +1,34 @@
+{% apply inline_css %}
+
+    <style>
+        main {
+            padding: 2rem;
+            font-family: "Dubai Light", sans-serif;
+            margin: .5rem;
+            color: #34352A;
+        }
+        span {
+            color: #B6A385;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        h2 {
+            font-size: 1.3rem;
+        }
+        p {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.2rem;
+            color: #34352A;
+        }
+    </style>
+{% endapply %}
+
+<main>
+    <h1> <span>Sujet :</span>  {{ title }}</h1>
+    <h2> <span>Auteur : </span>{{ lastName }} {{ firstName }}  </h2>
+    <p> <span>Contenu :</span> {{ message | raw }} </p>
+</main>
+
+
+
