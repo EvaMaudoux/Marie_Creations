@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ app.user.firstName }} {{ app.user.lastName }}{% endblock %}
+
+{% block body %}
+    <div class="editProfile">
+        <div class="sous-titre">
+            <h6>modifier mon profil</h6>
+        </div>
+        {{ form_start(profileForm) }}
+        {{ form_widget(profileForm.firstName) }}
+        {{ form_widget(profileForm.lastName) }}
+        {{ form_widget(profileForm.email) }}
+        {{ form_row(profileForm.imageFile, {
+            'row_attr': {'class': 'editProfileImg'}
+            })
+        }}
+        <input class="submit" type="submit" value="enregistrer les modifications">
+        {{ form_end(profileForm) }}
+    </div>
+{% endblock %}
+

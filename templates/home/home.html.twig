@@ -23,8 +23,8 @@
                 <div class="creations-container">
                     {% for creation in creations %}
                     <div class="card" style="height: 550px;">
-                        <img class="card-img-top" style="height: 400px;" src="{{  asset('img/allCreations/' ~ creation.imageName) }}" alt="{{ creation.imageName }}">
-                        <div class="card-body">
+                        <img class="card-img-top" style="height: 370px;" src="{{  asset('img/allCreations/' ~ creation.imageName) }}" alt="{{ creation.imageName }}">
+                        <div class="card-body" style="height: 150px;">
                             <h4 class="card-text">{{ creation.category.name }}</h4>
                             <h3 class="card-title">{{ creation.title | capitalize }}</h3>
                             <a href="{{ path('app_creation', {slug: creation.slug}) }}" class="btn btn-primary">voir plus</a>

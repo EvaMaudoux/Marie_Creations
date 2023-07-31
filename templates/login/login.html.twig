@@ -18,7 +18,7 @@
             <form action="{{ path('app_login') }}" method="post">
                 <input type="text" id="email" class="form-control" name="_username" placeholder="Email" value="{{ last_username }}" required>
                 <input type="password" id="password" name="_password" class="form-control" placeholder="Mot de passe" required>
-                <p><a class="btn-section" href="">Mot de passe oublié ?</a></p>
+                <p><a class="btn-section" href="{{ path('app_forgot_password_request') }}">Mot de passe oublié ?</a></p>
                 <input class="submit" type="submit" value="Se connecter">
                 <div>
                     <p>Vous n'avez pas encore de compte ?</p>

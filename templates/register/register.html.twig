@@ -11,7 +11,16 @@
             <h1>Bienvenue !</h1>
             <h2>Veuillez entrer vos informations</h2>
             {{ form_start(registrationForm) }}
-            {{ form_widget(registrationForm) }}
+            {{ form_widget(registrationForm.firstName) }}
+            {{ form_widget(registrationForm.lastName) }}
+            {{ form_widget(registrationForm.email) }}
+            {{ form_widget(registrationForm.plainPassword) }}
+            {{ form_row(registrationForm.imageFile) }}
+            <p>* Si vous le souhaitez, ajoutez une photo à votre profil utilisateur !</p>
+            <div class="btn-newsletter">
+                <input type="checkbox" id="newsletterCheckbox" name="newsletterCheckbox">
+                <label for="newsletterCheckbox">S'inscrire à ma newsletter</label>
+            </div>
             <input class="submit" type="submit" value="S'inscrire">
             <div>
                 <p>Vous avez déjà un compte ?</p>
@@ -21,15 +30,3 @@
         </div>
     </main>
 {% endblock %}
-
-{#<form action="">#}
-{#    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>#}
-{#    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>#}
-{#    <input type="email" id="email" name="email" placeholder="Votre email" required>#}
-{#    <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>#}
-{#    <input class="submit" type="submit" value="S'inscrire">#}
-{#    <div>#}
-{#        <p>Vous avez déjà un compte ?</p>#}
-{#        <p class="text-center"><a class="btn-section"  href="{{ path('app_login') }}">Se connecter</a></p>#}
-{#    </div>#}
-{#</form>#}

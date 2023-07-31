@@ -9,7 +9,22 @@
             <h6>Mon profil</h6>
         </div>
         <div class="profile-container">
-        
+            <div class="bg-profile">
+                <img src="img/users/{{ app.user.imageName }}" alt="{{ app.user.firstName }} {{ app.user.lastName }}">
+                <h1>{{ app.user.firstName }} {{ app.user.lastName }}</h1>
+            </div>
+            <div class="profile">
+                <h1>Mon profil</h1>
+                <div class="infos">
+                    <p>Adresse mail :  {{ app.user.email }}</p>
+                    <p>Membre depuis le : {{ app.user.createdAt|date('d/m/Y') }}</p>
+                    <p>Réservations d'ateliers : </p>
+                </div>
+                <div class="edit">
+                    <p><a href="{{ path('app_editProfile') }}">modifier mon profil</a></p>
+                </div>
+
+            </div>
         </div>
     </section>
 

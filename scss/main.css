@@ -15,7 +15,7 @@
   font-style: italic;
 }
 
-.h4-uppercase, .creation-container .details .creation .card-body h4, .creations .categorie-creation li, .home-container .articles .grid-container .articles-container .card-body h4, .home-container .creations .creations-container .card .card-body h4, .home-container .hero .texte-hero-container h4, .sous-titre, .btn-section, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a, .btn-desktop, footer .newsletter .inscription button, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
+.h4-uppercase, .profile-container .profile .edit a, .creation-container .details .creation .card-body h4, .creations .categorie-creation li, .home-container .articles .grid-container .articles-container .card-body h4, .home-container .creations .creations-container .card .card-body h4, .home-container .hero .texte-hero-container h4, .sous-titre, .btn-section, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a, .btn-desktop, footer .newsletter .inscription button, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
   font-family: "Thasadith", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -24,7 +24,7 @@
   text-decoration: none;
 }
 
-.h2, #about > p a, .article-container .flex-container .others-articles > h2, .article-container .flex-container .article .article-header h2, .article-container .flex-container .article .article-header h1, .creation-container .details .creation .card-body h2, .home-container .articles h2, .home-container .ateliers .section-container h2, .home-container .creations h2 {
+.h2, .reset-password h1, .change-password h1, .profile-container .profile h1, .profile-container .bg-profile h1, #about > p a, .article-container .flex-container .others-articles > h2, .article-container .flex-container .article .article-header h2, .article-container .flex-container .article .article-header h1, .creation-container .details .creation .card-body h2, .home-container .articles h2, .home-container .ateliers .section-container h2, .home-container .creations h2 {
   font-family: "Noto Serif Display", serif;
   font-size: 40px;
   font-weight: 300;
@@ -40,7 +40,7 @@
   font-style: italic;
 }
 
-.h6-desktop, .contact .grid-container .contact-container .form-contact .form .submit, .register .form-register form .submit, .register .form-login form .submit, .login .form-register form .submit, .login .form-login form .submit, #about .texte-about-1 h6, .article-container .flex-container .article .comment-area .new-comment form .submit, .article-container .flex-container .article .article-header h6, .blog-container .blog .articles-container .row-articles .article .article-texte h6, .ateliers #hero-container .hero-ateliers h6, .navbar a {
+.h6-desktop, .reset-password .submit, .change-password .submit, .editProfile .submit, .contact .grid-container .contact-container .form-contact .form .submit, .register .form-register > form .submit, .register .form-login > form .submit, .login .form-register > form .submit, .login .form-login > form .submit, #about .texte-about-1 h6, .article-container .flex-container .article .comment-area .new-comment > form .submit, .article-container .flex-container .article .article-header h6, .blog-container .blog .articles-container .row-articles .article .article-texte h6, .ateliers #hero-container .hero-ateliers h6, .right-links > a, .left-links > a, .navbar a {
   font-family: "Thasadith", sans-serif;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -49,7 +49,7 @@
   text-decoration: none;
 }
 
-.paragraphe-desktop, .conditions .liens p, footer .newsletter .inscription form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .contact .grid-container .contact-container .form-contact .form input, .contact .grid-container .contact-container .form-contact .form textarea, .contact .grid-container .contact-container .form-contact p, .error-message, .register .form-register form input, .register .form-login form input, .login .form-register form input, .login .form-login form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .comment-area .new-comment form textarea, .article-container .flex-container .article .comment-area .last-comments .item p, .article-container .flex-container .article .comment-area .last-comments .item h3, .article-container .flex-container .article .comment-area .last-comments .item > h2, .article-container .flex-container .article .article-body p, .article-container .flex-container .article .article-header p, .blog-container .blog .articles-container .row-articles .article .article-texte p, .ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p, .ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
+.paragraphe-desktop, .conditions .liens p, footer .newsletter .inscription > form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .reset-password p, .change-password p, .reset-password input, .change-password input, .editProfile input, .profile-container .profile .infos p, .contact .grid-container .contact-container .form-contact .form input, .contact .grid-container .contact-container .form-contact .form textarea, .contact .grid-container .contact-container .form-contact p, .error-message, .register .form-register .btn-newsletter label, .login .form-register .btn-newsletter label, .register .form-register > form input, .register .form-login > form input, .login .form-register > form input, .login .form-login > form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .comment-area .new-comment > form textarea, .article-container .flex-container .article .comment-area .last-comments .item p, .article-container .flex-container .article .comment-area .last-comments .item h3, .article-container .flex-container .article .comment-area .last-comments .item > h2, .article-container .flex-container .article .article-body p, .article-container .flex-container .article .article-header p, .blog-container .blog .articles-container .row-articles .article .article-texte p, .ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p, .ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
   font-family: "Tajawal", sans-serif;
   font-weight: 200;
   font-size: 20px;
@@ -112,8 +112,10 @@
   background-color: #F0EDE6;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
+  /* Styles supplémentaires pour .navbar si nécessaire */
 }
 .navbar a {
   color: #5E604B;
@@ -130,7 +132,7 @@
   background-color: #5E604B;
   color: #F0EDE6;
 }
-.navbar .dropdown-menu {
+.navbar .dropdown .dropdown-menu {
   position: absolute;
   right: 0;
   left: auto;
@@ -139,19 +141,38 @@
   padding: 0;
   border-color: #5E604B;
 }
-.navbar .dropdown-menu .dropdown-item {
+.navbar .dropdown .dropdown-menu .dropdown-item {
   padding: 12px 22px;
 }
-.navbar .dropdown-menu .dropdown-item:hover {
+.navbar .dropdown .dropdown-menu .dropdown-item:hover {
   background-color: #5E604B;
   color: #F0EDE6;
 }
-.navbar .logo-container {
+
+.left-links, .right-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-links > a {
+  color: #5E604B;
+  margin: 0 3rem; /* Espacement entre les liens de gauche */
+}
+
+.right-links > a {
+  color: #5E604B;
+  margin: 0 3rem; /* Espacement entre les liens de droite */
+}
+
+.logo-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 1; /* Pour que le logo prenne l'espace disponible */
 }
-.navbar .logo-container h1 {
+.logo-container h1 {
   color: #5E604B;
   font-size: 40px;
   font-family: "Noto Serif Display", serif;
@@ -159,11 +180,23 @@
   font-weight: 400;
   margin: 0;
 }
-.navbar .logo-container .horizontal-line {
+.logo-container .horizontal-line {
   border: none;
   border-top: 2px solid black;
   width: 350px;
   margin: 10px 3.2rem;
+}
+
+/* Nouveau code pour centrer le logo */
+.navbar {
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* section hero - page home */
@@ -810,37 +843,37 @@
   color: #5E604B;
   padding: 3rem 0 1rem 0;
 }
-.article-container .flex-container .article .comment-area .new-comment form {
+.article-container .flex-container .article .comment-area .new-comment > form {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
-.article-container .flex-container .article .comment-area .new-comment form > div {
+.article-container .flex-container .article .comment-area .new-comment > form > div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   margin: 1rem 0;
 }
-.article-container .flex-container .article .comment-area .new-comment form > div > input {
+.article-container .flex-container .article .comment-area .new-comment > form > div > input {
   margin-right: 1.3rem;
   outline: none;
   padding: 0.5rem;
   border: 1px solid #DBD2C3;
 }
-.article-container .flex-container .article .comment-area .new-comment form > div > input::placeholder {
+.article-container .flex-container .article .comment-area .new-comment > form > div > input::placeholder {
   color: #5E604B;
 }
-.article-container .flex-container .article .comment-area .new-comment form textarea {
+.article-container .flex-container .article .comment-area .new-comment > form textarea {
   outline: none;
   padding: 0.5rem;
   border: 1px solid #DBD2C3;
   letter-spacing: 1px;
   margin-bottom: 3rem;
 }
-.article-container .flex-container .article .comment-area .new-comment form textarea::placeholder {
+.article-container .flex-container .article .comment-area .new-comment > form textarea::placeholder {
   color: #5E604B;
 }
-.article-container .flex-container .article .comment-area .new-comment form .submit {
+.article-container .flex-container .article .comment-area .new-comment > form .submit {
   width: 25%;
   padding: 0.7rem 0;
   border: none;
@@ -976,13 +1009,13 @@
   text-align: center;
   margin-bottom: 3rem;
 }
-.register .form-register form, .register .form-login form, .login .form-register form, .login .form-login form {
+.register .form-register > form, .register .form-login > form, .login .form-register > form, .login .form-login > form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
-.register .form-register form input, .register .form-login form input, .login .form-register form input, .login .form-login form input {
+.register .form-register > form input, .register .form-login > form input, .login .form-register > form input, .login .form-login > form input {
   outline: none;
   width: 100%;
   border: none;
@@ -992,10 +1025,10 @@
   color: #5E604B;
   letter-spacing: 1px;
 }
-.register .form-register form input::placeholder, .register .form-login form input::placeholder, .login .form-register form input::placeholder, .login .form-login form input::placeholder {
+.register .form-register > form input::placeholder, .register .form-login > form input::placeholder, .login .form-register > form input::placeholder, .login .form-login > form input::placeholder {
   color: #5E604B;
 }
-.register .form-register form .submit, .register .form-login form .submit, .login .form-register form .submit, .login .form-login form .submit {
+.register .form-register > form .submit, .register .form-login > form .submit, .login .form-register > form .submit, .login .form-login > form .submit {
   margin-top: 3rem;
   width: 50%;
   border: none;
@@ -1003,30 +1036,50 @@
   text-align: center;
   color: #F0EDE6;
 }
-.register .form-register form div:last-child, .register .form-login form div:last-child, .login .form-register form div:last-child, .login .form-login form div:last-child {
-  padding-top: 2rem;
+.register .form-register > form div:last-child, .register .form-login > form div:last-child, .login .form-register > form div:last-child, .login .form-login > form div:last-child {
+  padding-top: 0;
 }
-.register .form-register form div:last-child p a, .register .form-login form div:last-child p a, .login .form-register form div:last-child p a, .login .form-login form div:last-child p a {
+.register .form-register > form div:last-child p a, .register .form-login > form div:last-child p a, .login .form-register > form div:last-child p a, .login .form-login > form div:last-child p a {
   color: #5E604B;
   font-size: 15px;
 }
-.register .form-register form > div, .register .form-login form > div, .login .form-register form > div, .login .form-login form > div {
+.register .form-register > form > div, .register .form-login > form > div, .login .form-register > form > div, .login .form-login > form > div {
   margin: 1rem;
   width: 100%;
   text-align: center;
 }
-.register .form-register form .btn-section, .register .form-register form .home-container .creations p a, .home-container .creations p .register .form-register form a, .register .form-register form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .register .form-register form a, .register .form-register form .creation-container .details p:last-child a, .creation-container .details p:last-child .register .form-register form a, .register .form-register form .blog-container .blog > p a, .blog-container .blog > p .register .form-register form a, .register .form-register form .article-container .details > p a, .article-container .details > p .register .form-register form a, .register .form-login form .btn-section, .register .form-login form .home-container .creations p a, .home-container .creations p .register .form-login form a, .register .form-login form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .register .form-login form a, .register .form-login form .creation-container .details p:last-child a, .creation-container .details p:last-child .register .form-login form a, .register .form-login form .blog-container .blog > p a, .blog-container .blog > p .register .form-login form a, .register .form-login form .article-container .details > p a, .article-container .details > p .register .form-login form a, .login .form-register form .btn-section, .login .form-register form .home-container .creations p a, .home-container .creations p .login .form-register form a, .login .form-register form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .login .form-register form a, .login .form-register form .creation-container .details p:last-child a, .creation-container .details p:last-child .login .form-register form a, .login .form-register form .blog-container .blog > p a, .blog-container .blog > p .login .form-register form a, .login .form-register form .article-container .details > p a, .article-container .details > p .login .form-register form a, .login .form-login form .btn-section, .login .form-login form .home-container .creations p a, .home-container .creations p .login .form-login form a, .login .form-login form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .login .form-login form a, .login .form-login form .creation-container .details p:last-child a, .creation-container .details p:last-child .login .form-login form a, .login .form-login form .blog-container .blog > p a, .blog-container .blog > p .login .form-login form a, .login .form-login form .article-container .details > p a, .article-container .details > p .login .form-login form a {
+.register .form-register > form .btn-section, .register .form-register > form .home-container .creations p a, .home-container .creations p .register .form-register > form a, .register .form-register > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .register .form-register > form a, .register .form-register > form .creation-container .details p:last-child a, .creation-container .details p:last-child .register .form-register > form a, .register .form-register > form .blog-container .blog > p a, .blog-container .blog > p .register .form-register > form a, .register .form-register > form .article-container .details > p a, .article-container .details > p .register .form-register > form a, .register .form-login > form .btn-section, .register .form-login > form .home-container .creations p a, .home-container .creations p .register .form-login > form a, .register .form-login > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .register .form-login > form a, .register .form-login > form .creation-container .details p:last-child a, .creation-container .details p:last-child .register .form-login > form a, .register .form-login > form .blog-container .blog > p a, .blog-container .blog > p .register .form-login > form a, .register .form-login > form .article-container .details > p a, .article-container .details > p .register .form-login > form a, .login .form-register > form .btn-section, .login .form-register > form .home-container .creations p a, .home-container .creations p .login .form-register > form a, .login .form-register > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .login .form-register > form a, .login .form-register > form .creation-container .details p:last-child a, .creation-container .details p:last-child .login .form-register > form a, .login .form-register > form .blog-container .blog > p a, .blog-container .blog > p .login .form-register > form a, .login .form-register > form .article-container .details > p a, .article-container .details > p .login .form-register > form a, .login .form-login > form .btn-section, .login .form-login > form .home-container .creations p a, .home-container .creations p .login .form-login > form a, .login .form-login > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .login .form-login > form a, .login .form-login > form .creation-container .details p:last-child a, .creation-container .details p:last-child .login .form-login > form a, .login .form-login > form .blog-container .blog > p a, .blog-container .blog > p .login .form-login > form a, .login .form-login > form .article-container .details > p a, .article-container .details > p .login .form-login > form a {
   letter-spacing: 2.5px;
+  color: #5E604B;
+  font-size: 15px;
+}
+.register .form-register .btn-newsletter, .login .form-register .btn-newsletter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.register .form-register .btn-newsletter input, .login .form-register .btn-newsletter input {
+  width: fit-content;
+}
+.register .form-register .btn-newsletter label, .login .form-register .btn-newsletter label {
+  letter-spacing: 1px;
+  padding-left: 1rem;
+}
+.register .form-register p, .login .form-register p {
+  font-size: 18px;
+  align-self: start;
+  margin-top: 0;
 }
 
-.login form input:nth-child(4) {
+.login > form input:nth-child(4) {
   margin-bottom: 0;
 }
-.login form > p {
+.login > form > p {
   align-self: start;
   padding: 2rem 0;
 }
-.login form > p a {
+.login > form > p a {
   text-decoration: none;
   color: #5E604B;
   font-size: 15px;
@@ -1039,12 +1092,14 @@
   margin-top: 2rem;
 }
 
-.register form input:nth-child(4) {
-  margin-bottom: 4rem;
+.register > form p {
+  margin-bottom: 2rem;
+  width: 100%;
+  color: #5E604B;
 }
 
-.custom-error-message {
-  color: red;
+.custom-file-upload {
+  padding: 0;
 }
 
 /* contact */
@@ -1086,7 +1141,7 @@
   flex-direction: column;
   align-items: center;
 }
-.contact .grid-container .contact-container .form-contact .form form {
+.contact .grid-container .contact-container .form-contact .form > form {
   width: 70%;
 }
 .contact .grid-container .contact-container .form-contact .form input, .contact .grid-container .contact-container .form-contact .form textarea {
@@ -1143,6 +1198,149 @@
   height: 90%;
 }
 
+/* user profile */
+.profile-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 5rem;
+}
+.profile-container .bg-profile {
+  grid-column: 2/6;
+  background-color: #DBD2C3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
+  gap: 4rem;
+}
+.profile-container .bg-profile img {
+  width: 60%;
+}
+.profile-container .bg-profile h1 {
+  font-size: 40px;
+  color: #5E604B;
+}
+.profile-container .profile {
+  grid-column: 6/12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+.profile-container .profile h1 {
+  font-size: 45px;
+  color: #5E604B;
+  text-align: center;
+  margin-top: 12rem;
+  letter-spacing: 3px;
+}
+.profile-container .profile .infos {
+  text-align: center;
+}
+.profile-container .profile .infos p {
+  font-size: 23px;
+}
+.profile-container .profile .edit p {
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+.profile-container .profile .edit a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 18px;
+  color: #5E604B;
+}
+.profile-container .profile .edit a:hover {
+  background-color: #F0EDE6;
+  padding: 10px 20px;
+}
+
+/* edit-profile */
+.editProfile {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.editProfile .editProfileImg img {
+  padding: 1rem 0;
+  margin-left: 14rem;
+  margin-bottom: 4rem;
+}
+.editProfile > form {
+  width: 40%;
+}
+.editProfile input {
+  outline: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #DBD2C3;
+  padding: 0.2rem 0;
+  margin: 1.5rem 0;
+  color: #5E604B;
+  letter-spacing: 1px;
+}
+.editProfile input::placeholder {
+  color: #5E604B;
+}
+.editProfile .submit {
+  width: 60%;
+  border: none;
+  background-color: #5E604B;
+  text-align: center;
+  color: #F0EDE6;
+  margin-left: 9rem;
+  padding: 10px 20px;
+}
+
+/* réinitialisation de mot de passe */
+.reset-password, .change-password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 6rem 10rem 9rem 10rem;
+}
+.reset-password h1, .change-password h1 {
+  font-size: 38px;
+  color: #5E604B;
+  letter-spacing: 3px;
+  margin-bottom: 2.5rem;
+}
+.reset-password input, .change-password input {
+  outline: none;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #DBD2C3;
+  padding: 0.2rem 0;
+  margin: 2rem 0;
+  color: #5E604B;
+  letter-spacing: 1px;
+}
+.reset-password input::placeholder, .change-password input::placeholder {
+  color: #5E604B;
+}
+.reset-password p, .change-password p {
+  font-size: 20px;
+  line-height: 2.5rem;
+}
+.reset-password .submit, .change-password .submit {
+  margin-top: 3rem;
+  border: none;
+  background-color: #5E604B;
+  text-align: center;
+  color: #F0EDE6;
+  padding: 10px 20px;
+  border-radius: 0;
+}
+
+.change-password input {
+  width: 100%;
+  margin: 1rem 0;
+}
+
 /* footer */
 footer {
   height: 320px;
@@ -1176,6 +1374,7 @@ footer .navigation .liens a {
   text-decoration: none;
   font-size: 16px;
   letter-spacing: 2px;
+  margin: 4px 0;
 }
 footer .newsletter > p {
   font-size: 17px;
@@ -1185,14 +1384,15 @@ footer .newsletter .inscription p {
   letter-spacing: 2px;
   line-height: 25px;
 }
-footer .newsletter .inscription form {
+footer .newsletter .inscription > form {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin: 2rem 0 3rem 0;
   height: 3rem;
 }
-footer .newsletter .inscription form input {
+footer .newsletter .inscription > form input {
+  outline: none;
   padding-left: 10px;
   background-color: #5E604B;
   border: 1px solid #F0EDE6;
@@ -1214,11 +1414,12 @@ footer .newsletter .inscription button {
   display: flex;
   flex-direction: column;
   align-items: end;
+  margin-bottom: 17px;
 }
 .conditions .liens p {
   font-size: 16px;
   letter-spacing: 2px;
-  margin-bottom: 10px;
+  margin: 5px 0;
 }
 .conditions .icones {
   display: flex;

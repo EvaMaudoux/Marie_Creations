@@ -1,0 +1,19 @@
+{# templates/reinitialisation-mdp/check_email.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="reset-password">
+        <h1>Vérifiez vos e-mails</h1>
+        <p>
+            Si un compte correspondant à votre adresse e-mail existe, un e-mail vient de vous être envoyé. <br>Il contient un lien que vous pouvez utiliser pour réinitialiser votre mot de passe.
+            Ce lien expirera dans {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+        </p>
+        <p>
+            Si vous ne recevez pas d'e-mail, n'hésitez pas à regarder dans vos spams ou
+            <a href="{{ path('app_forgot_password_request') }}">cliquez ici</a> pour réessayer.
+        </p>
+    </section>
+
+
+{% endblock %}

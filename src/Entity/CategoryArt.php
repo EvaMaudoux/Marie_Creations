@@ -72,4 +72,10 @@ class CategoryArt
 
         return $this;
     }
+
+    // EAsyAdmin - classes relationnelles
+    public function __toString(): string
+    {
+        return $this->name;
+    }
 }

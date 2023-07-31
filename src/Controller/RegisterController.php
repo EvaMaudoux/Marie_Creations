@@ -28,8 +28,11 @@ class RegisterController extends AbstractController
                 )
             );
 
-            $user   -> setRoles(['ROLE_USER'])
-                    -> setIsDisabled(false);
+            if(empty($user->getImageFile()))  $user->setImageName('default.jpg');
+            $user   ->setCreatedAt(new \DateTimeImmutable())
+                ->setUpdatedAt(new \DateTimeImmutable())
+                ->setRoles(['ROLE_USER'])
+                ->setIsDisabled(false);
             $entityManager->persist($user);
             $entityManager->flush();
 
