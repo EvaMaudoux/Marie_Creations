@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ReservationController!{% endblock %}
+
+{% block body %}
+    {% for reservation in reservations %}
+      <p>{{ reservation.id }}</p>
+    {% endfor %}
+{% endblock %}

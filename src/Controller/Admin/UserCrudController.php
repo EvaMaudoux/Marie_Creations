@@ -55,8 +55,8 @@ class UserCrudController extends AbstractCrudController
                 ->hideOnForm(),
            /* ArrayField::new('likes', 'Tableaux aimés par l\'utilisateur')
                 ->hideOnForm(),
-
-           */
+            */
+            ArrayField::new('reservations', 'Réservations d\'ateliers'),
             ArrayField::new('roles', 'Rôle'),
 
         ];

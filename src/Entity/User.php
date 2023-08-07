@@ -307,4 +307,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, Seriali
 
         return $this;
     }
+
+    // EAsyAdmin - classes relationnelles
+    public function __toString(): string
+    {
+        return $this->lastName . ' ' . $this->firstName;
+    }
 }

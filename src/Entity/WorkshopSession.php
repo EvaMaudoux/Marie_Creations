@@ -119,4 +119,10 @@ class WorkshopSession
 
         return $this;
     }
+
+    // EAsyAdmin - classes relationnelles
+    public function __toString(): string
+    {
+        return ucFirst($this->workshopType);
+    }
 }

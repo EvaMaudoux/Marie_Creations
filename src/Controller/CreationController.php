@@ -30,7 +30,6 @@ class CreationController extends AbstractController
         ]);
     }
 
-
     /**
      * @param Creation $creation
      * @return Response

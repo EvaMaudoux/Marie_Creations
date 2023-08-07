@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\CategoryArt;
 use App\Entity\Creation;
+use App\Entity\Reservation;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -42,6 +43,12 @@ class DashboardController extends AbstractDashboardController
             yield MenuItem::subMenu('Voir', 'fas fa-bars')->setSubItems([
                 MenuItem::linkToCrud('Tous les utilisateurs inscrits', 'fa-solid fa-eye', User::class),
             ]);
+
+        // Section réservations
+        yield MenuItem::section('Réservations d\'ateliers', 'fa-solid fa-user');
+        yield MenuItem::subMenu('Actions', 'fas fa-bars')->setSubItems([
+            MenuItem::linkToCrud('Voir toutes les réservations', 'fa-solid fa-eye', Reservation::class),
+           ]);
 
 
         // Section créations

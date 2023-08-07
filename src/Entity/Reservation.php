@@ -4,6 +4,9 @@ namespace App\Entity;
 
 use App\Repository\ReservationRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\User;
+use App\Entity\WorkshopSession;
+
 
 #[ORM\Entity(repositoryClass: ReservationRepository::class)]
 class Reservation
@@ -61,9 +64,9 @@ class Reservation
         return $this->user_id;
     }
 
-    public function setUserId(?User $user_id): self
+    public function setUserId(?User $user): self
     {
-        $this->user_id = $user_id;
+        $this->user_id = $user;
 
         return $this;
     }
@@ -73,10 +76,16 @@ class Reservation
         return $this->workshop_id;
     }
 
-    public function setWorkshopId(?WorkshopSession $workshop_id): self
+    public function setWorkshopId(?WorkshopSession $workshop): self
     {
-        $this->workshop_id = $workshop_id;
+        $this->workshop_id = $workshop;
 
         return $this;
+    }
+
+    // EAsyAdmin - classes relationnelles
+    public function __toString(): string
+    {
+        return 'Atelier de ' . $this->workshop_id;
     }
 }
