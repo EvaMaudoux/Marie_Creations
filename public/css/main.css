@@ -1385,6 +1385,12 @@
   height: 90%;
 }
 
+/* calendar_admin */
+#calendrier_admin {
+  width: 60%;
+  margin: auto;
+}
+
 /* user profile */
 .profile-container {
   display: grid;
