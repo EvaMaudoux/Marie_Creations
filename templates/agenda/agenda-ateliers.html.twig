@@ -1,22 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Calendar index{% endblock %}
+{% block title %}{{parent() }} - Calendrier des ateliers {% endblock %}
 
 {% block body %}
-    <h1>Calendar index</h1>
+    <h1>Calendrier des ateliers</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Start</th>
-                <th>End</th>
-                <th>Background_color</th>
-                <th>Border_color</th>
-                <th>Text_color</th>
-                <th>All_day</th>
+                <th>Titre</th>
+                <th>Infos supplémentaires</th>
+                <th>Début</th>
+                <th>Fin</th>
+                <th>Couleur de fond</th>
+                <th>Couleur de bordure</th>
+                <th>Couleurs de texte</th>
+                <th>Toute la journée</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -33,17 +33,17 @@
                 <td>{{ calendar.textColor }}</td>
                 <td>{{ calendar.allDay ? 'Yes' : 'No' }}</td>
                 <td>
-                    <a href="{{ path('app_agenda_show', {'id': calendar.id}) }}">show</a>
-                    <a href="{{ path('app_agenda_edit', {'id': calendar.id}) }}">edit</a>
+                    <a href="{{ path('app_agenda_show', {'id': calendar.id}) }}">Voir</a>
+                    <a href="{{ path('app_agenda_edit', {'id': calendar.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="10">no records found</td>
+                <td colspan="10">Pas d'atelier de prévu pour le moment</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_agenda_new') }}">Create new</a>
+    <a href="{{ path('app_agenda_new') }}">Créer un nouvel atelier</a>
 {% endblock %}

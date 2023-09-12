@@ -21,7 +21,7 @@ class UserController extends AbstractController
         ]);
     }
 
-    #[Route('/modif-profil', name: 'app_editProfile')]
+    #[Route('/profil/modifier-profil', name: 'app_editProfile')]
     public function editProfile(Request $request, EntityManagerInterface $manager) : Response
     {
         $user = $this->getUser();

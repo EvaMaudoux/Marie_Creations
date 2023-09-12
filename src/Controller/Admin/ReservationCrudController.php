@@ -6,6 +6,7 @@ use App\Entity\Reservation;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class ReservationCrudController extends AbstractCrudController
@@ -20,8 +21,9 @@ class ReservationCrudController extends AbstractCrudController
     {
         return [
             AssociationField::new('user_id', 'Utilisateur'),
-            AssociationField::new('workshop_id', 'Atelier'),
-            DateField::new('created_at ', 'Date de réservation'),
+            AssociationField::new('workshop', 'Atelier'),
+            DateTimeField::new('createdAt ', 'Date de réservation')
+            ->hideOnForm(),
             TextField::new('status', 'Statut de la réservation'),
         ];
     }

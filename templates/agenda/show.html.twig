@@ -1,54 +1,54 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Calendar{% endblock %}
+{% block title %}Agenda{% endblock %}
 
 {% block body %}
-    <h1>Calendar</h1>
+    <h1>Liste des ateliers</h1>
 
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th>Id de l'atelier</th>
                 <td>{{ calendar.id }}</td>
             </tr>
             <tr>
-                <th>Title</th>
+                <th>Nom de l'atelier</th>
                 <td>{{ calendar.title }}</td>
             </tr>
             <tr>
-                <th>Description</th>
+                <th>Infos supplémentaires</th>
                 <td>{{ calendar.description }}</td>
             </tr>
             <tr>
-                <th>Start</th>
+                <th>Début de l'atelier</th>
                 <td>{{ calendar.start ? calendar.start|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
-                <th>End</th>
+                <th>Fin de l'atelier</th>
                 <td>{{ calendar.end ? calendar.end|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
-                <th>Background_color</th>
+                <th>Couleur de fond</th>
                 <td>{{ calendar.backgroundColor }}</td>
             </tr>
             <tr>
-                <th>Border_color</th>
+                <th>Couleur de la bordure</th>
                 <td>{{ calendar.borderColor }}</td>
             </tr>
             <tr>
-                <th>Text_color</th>
+                <th>Couleur du texte</th>
                 <td>{{ calendar.textColor }}</td>
             </tr>
             <tr>
-                <th>All_day</th>
-                <td>{{ calendar.allDay ? 'Yes' : 'No' }}</td>
+                <th>Toute la journée/th>
+                <td>{{ calendar.allDay ? 'Oui' : 'Non' }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_agenda_index') }}">back to list</a>
+    <a href="{{ path('app_agenda_index') }}">Retour à la liste</a>
 
-    <a href="{{ path('app_agenda_edit', {'id': calendar.id}) }}">edit</a>
+    <a href="{{ path('app_agenda_edit', {'id': calendar.id}) }}">Modifier l'atelier</a>
 
     {{ include('agenda/_delete_form.html.twig') }}
 {% endblock %}

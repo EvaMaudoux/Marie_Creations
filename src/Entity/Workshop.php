@@ -28,19 +28,19 @@ class Workshop
     #[ORM\Column]
     private ?int $maxCapacity = null;
 
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?CategoryArt $category = null;
-
-    #[ORM\OneToMany(mappedBy: 'workshop_type', targetEntity: WorkshopSession::class)]
-    private Collection $workshopSessions;
 
     #[ORM\Column(length: 255)]
     private ?string $image_name = null;
 
+    #[ORM\OneToMany(mappedBy: 'workshop', targetEntity: Calendar::class)]
+    private Collection $sessions;
+
     public function __construct()
     {
-        $this->workshopSessions = new ArrayCollection();
+        $this->sessions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -108,35 +108,6 @@ class Workshop
         return $this;
     }
 
-    /**
-     * @return Collection<int, WorkshopSession>
-     */
-    public function getWorkshopSessions(): Collection
-    {
-        return $this->workshopSessions;
-    }
-
-    public function addWorkshopSession(WorkshopSession $workshopSession): self
-    {
-        if (!$this->workshopSessions->contains($workshopSession)) {
-            $this->workshopSessions->add($workshopSession);
-            $workshopSession->setWorkshopType($this);
-        }
-
-        return $this;
-    }
-
-    public function removeWorkshopSession(WorkshopSession $workshopSession): self
-    {
-        if ($this->workshopSessions->removeElement($workshopSession)) {
-            // set the owning side to null (unless already changed)
-            if ($workshopSession->getWorkshopType() === $this) {
-                $workshopSession->setWorkshopType(null);
-            }
-        }
-
-        return $this;
-    }
 
     public function getImageName(): ?string
     {
@@ -150,9 +121,39 @@ class Workshop
         return $this;
     }
 
-// EAsyAdmin - classes relationnelles
+    // EAsyAdmin - classes relationnelles
     public function __toString(): string
     {
         return ucFirst($this->name);
+    }
+
+    /**
+     * @return Collection<int, Calendar>
+     */
+    public function getSessions(): Collection
+    {
+        return $this->sessions;
+    }
+
+    public function addSession(Calendar $session): self
+    {
+        if (!$this->sessions->contains($session)) {
+            $this->sessions->add($session);
+            $session->setWorkshop($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSession(Calendar $session): self
+    {
+        if ($this->sessions->removeElement($session)) {
+            // set the owning side to null (unless already changed)
+            if ($session->getWorkshop() === $this) {
+                $session->setWorkshop(null);
+            }
+        }
+
+        return $this;
     }
 }

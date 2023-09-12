@@ -70,6 +70,6 @@ class ApiController extends AbstractController
             // Les données sont incomplètes
             return new Response('Données incomplètes', 404);
         }
-        return $this->render('api/index.html.twig');
+        return $this->render('admin/agenda_admin.html.twig');
     }
 }

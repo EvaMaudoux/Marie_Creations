@@ -20,6 +20,9 @@
     @extend .h6-desktop;
     color: $olive;
   }
+  .dropdown-title {
+    @extend .h6-desktop;
+  }
 
   /* Styles supplémentaires pour .navbar si nécessaire */
   .dropdown {
@@ -620,6 +623,11 @@
   }
 
   .ateliers-container {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: $olive;
+    }
     .atelier-container:nth-child(1) {
       background-color: $blanc;
       h2 {
@@ -635,7 +643,7 @@
       h2 {
         color: $blanc;
       }
-      p {
+      p, a {
         color: $blanc;
       }
     }
@@ -654,8 +662,124 @@
 }
 
 /* agenda des ateliers */
+#calendrier_admin, #calendar-view {
+  width: 70%;
+  margin: 4rem auto;
+}
+:root {
+  --fc-daygrid-event: 3rem;
+
+  /* custom  boutons au dessus de l'agenda */
+  --fc-button-text-color: #fff;
+  --fc-button-bg-color: #5e604b;
+  --fc-button-border-color: #5e604b;
+  --fc-button-hover-bg-color: #4b4c3b;
+  --fc-button-hover-border-color: #4b4c3b;
+  --fc-button-active-bg-color: #3a3b2e;
+  --fc-button-active-border-color: #3a3b2e;
+
+  /* custom  taille police des events */
+  --fc-small-font-size: 1rem;
+
+  /* custom  background de today */
+  --fc-today-bg-color: rgb(240, 237, 230);
+}
+/* custom  texte header cellules du haut */
+.fc .fc-col-header-cell-cushion {
+  color: $olive;
+  padding: 1rem;
+  @extend .paragraphe-desktop;
+}
 
 
+/* custom  date de la semaine centrée en hau */
+.fc .fc-toolbar-title {
+  @extend .h4-uppercase;
+  color: $olive-fonce;
+  font-size: 1.5rem;
+}
+
+/* custom  numéros mois (month view) */
+.fc .fc-daygrid-day-number {
+  @extend .h4-uppercase;
+  color: $olive;
+  font-weight: lighter;
+  padding: 1rem;
+}
+
+/* custom  texte event en month view */
+.fc a {
+  color: $olive;
+}
+
+.fc-event-main-frame {
+  gap: 1rem;
+  padding: 1rem;
+}
+
+
+
+/* custom  cellules verticales deg auche */
+.fc .fc-timegrid-axis-cushion, .fc .fc-timegrid-slot-label-cushion {
+  color: $olive;
+  @extend .h4-uppercase;
+  font-weight: lighter;
+  padding: 0 .5rem;
+}
+
+
+/* Styles pour la fenêtre modale des détails d'uèna telier (agenda)*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 60%; /* Centré verticalement */
+  left: 50%; /* Centré horizontalement */
+  transform: translate(-50%, -50%);
+  background-color: $blanc;
+  border: 1px solid $blanc;
+  z-index: 1000;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  width: 60%;
+  height: 60%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  p {
+    @extend .paragraphe-desktop;
+    font-size: 18px;
+    color: $olive;
+  }
+  h2 {
+    @extend .h2;
+    font-size: 27px;
+    padding: 2rem 1rem;
+    color: $olive-fonce;
+    text-align: center;
+  }
+  .intitule {
+    color: red;
+  }
+  .reservation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    a {
+      @extend .btn-desktop ;
+    }
+  }
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  padding-right: 1rem;
+  color: $olive;
+}
 
 /*  page blog  */
 .blog-container .blog {
@@ -1236,12 +1360,6 @@
       }
     }
   }
-}
-
-/* calendar_admin */
-#calendrier_admin {
-  width: 60%;
-  margin: auto;
 }
 
 /* user profile */

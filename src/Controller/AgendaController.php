@@ -15,12 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AgendaController extends AbstractController
 {
     #[Route('/', name: 'app_agenda_index', methods: ['GET'])]
-    public function index(CalendarRepository $calendarRepository): Response
-    {
-        return $this->render('agenda/agenda-ateliers.html.twig', [
-            'calendars' => $calendarRepository->findAll(),
-        ]);
-    }
+
 
     #[Route('/new', name: 'app_agenda_new', methods: ['GET', 'POST'])]
     public function new(Request $request, CalendarRepository $calendarRepository): Response
@@ -35,7 +30,7 @@ class AgendaController extends AbstractController
             return $this->redirectToRoute('app_agenda_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('agenda/new.html.twig', [
+        return $this->render('agenda/new.html.twig', [
             'calendar' => $calendar,
             'form' => $form,
         ]);
@@ -61,7 +56,7 @@ class AgendaController extends AbstractController
             return $this->redirectToRoute('app_agenda_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('agenda/edit.html.twig', [
+        return $this->render('agenda/edit.html.twig', [
             'calendar' => $calendar,
             'form' => $form,
         ]);

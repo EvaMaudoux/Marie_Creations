@@ -3,9 +3,12 @@
 namespace App\Entity;
 
 use App\Repository\CalendarRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CalendarRepository::class)]
+
 class Calendar
 {
     #[ORM\Id]
@@ -36,6 +39,18 @@ class Calendar
 
     #[ORM\Column]
     private ?bool $all_day = null;
+
+    #[ORM\ManyToOne(inversedBy: 'sessions')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Workshop $workshop = null;
+
+    #[ORM\OneToMany(mappedBy: 'workshop', targetEntity: Reservation::class)]
+    private Collection $reservations;
+
+    public function __construct()
+    {
+        $this->reservations = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -134,6 +149,55 @@ class Calendar
     public function setAllDay(bool $all_day): self
     {
         $this->all_day = $all_day;
+
+        return $this;
+    }
+
+    public function getWorkshop(): ?Workshop
+    {
+        return $this->workshop;
+    }
+
+    public function setWorkshop(?Workshop $workshop): self
+    {
+        $this->workshop = $workshop;
+
+        return $this;
+    }
+
+    // EAsyAdmin - classes relationnelles
+    public function __toString(): string
+    {
+        return ucFirst($this->title);
+    }
+
+
+    /**
+     * @return Collection<int, Reservation>
+     */
+    public function getReservations(): Collection
+    {
+        return $this->reservations;
+    }
+
+    public function addReservation(Reservation $reservation): self
+    {
+        if (!$this->reservations->contains($reservation)) {
+            $this->reservations[] = $reservation;
+            $reservation->setWorkshop($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReservation(Reservation $reservation): self
+    {
+        if ($this->reservations->removeElement($reservation)) {
+            // set the owning side to null (unless already changed)
+            if ($reservation->getWorkshop() === $this) {
+                $reservation->setWorkshop(null);
+            }
+        }
 
         return $this;
     }

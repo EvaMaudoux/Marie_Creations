@@ -6,11 +6,9 @@
 {% block body %}
     <main>
         <div class="sous-titre">
-            <h6>gérer mon agenda - administration</h6>
+            <h6>Gestion de mon agenda</h6>
         </div>
-        <div id="calendrier_admin">
-
-        </div>
+        <div id="calendrier_admin"></div>
     </main>
 {% endblock %}
 
@@ -26,11 +24,20 @@
                 headerToolbar: {
                     start: 'prev,next today',
                     center: 'title',
-                    end: 'dayGridMonth,timeGridWeek'
+                    end: 'dayGridMonth,timeGridWeek,timeGridDay'
                 },
+                buttonText: {
+                    today: 'Aujourd\'hui',
+                    month: 'Mois',
+                    week: 'Semaine',
+                    day: 'Jour'
+                },
+                slotMinTime: '07:00:00',
+                slotMaxTime: '23:00:00',
+                firstDay: 1,
                 events: {{ data|raw }},
                 editable: true,
-                eventResizableFromStart: true
+                eventResizableFromStart: true,
             });
 
             calendar.on('eventChange', (e) => {

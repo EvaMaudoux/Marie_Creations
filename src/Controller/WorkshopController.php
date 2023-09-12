@@ -3,9 +3,12 @@
 namespace App\Controller;
 
 use App\Repository\WorkshopRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
+
 
 class WorkshopController extends AbstractController
 {
@@ -21,4 +24,6 @@ class WorkshopController extends AbstractController
             'workshops' => $workshops,
         ]);
     }
+
+
 }

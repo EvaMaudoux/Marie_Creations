@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil utilisateur{% endblock %}
+
+{% block body %}
+
+    <section id="profile">
+        <div class="sous-titre">
+            <h6>Mes réservations d'ateliers</h6>
+        </div>
+        <div class="my-reservations">
+            {% if reservations is empty %}
+                <p>Vous n'avez pas encore effectué de réservations.</p>
+            {% else %}
+                <ul>
+                    {% for reservation in reservations %}
+                        <li>
+                            Atelier : {{ reservation.workshop.title }}
+                            Date : {{ reservation.workshop.start|date('d/m/Y') }}
+                            Statut : {{ reservation.status }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock %}

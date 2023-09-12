@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Agenda{% endblock %}
+
+{% block body %}
+    <h1>{{ workshop.getName() }}</h1>
+    <p>Price: {{ price }} euros</p>
+    <p>Max Capacity: {{ maxCapacity }}</p>
+    <p>Description: {{ description }}</p>
+{% endblock %}

@@ -5,7 +5,6 @@ namespace App\Entity;
 use App\Repository\ReservationRepository;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\User;
-use App\Entity\WorkshopSession;
 
 
 #[ORM\Entity(repositoryClass: ReservationRepository::class)]
@@ -28,7 +27,7 @@ class Reservation
 
     #[ORM\ManyToOne(inversedBy: 'reservations')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?WorkshopSession $workshop_id = null;
+    private ?Calendar $workshop = null;
 
     public function getId(): ?int
     {
@@ -71,21 +70,25 @@ class Reservation
         return $this;
     }
 
-    public function getWorkshopId(): ?WorkshopSession
+
+
+    public function getWorkshop(): ?Calendar
     {
-        return $this->workshop_id;
+        return $this->workshop;
     }
 
-    public function setWorkshopId(?WorkshopSession $workshop): self
+    public function setWorkshop(?Calendar $workshop): self
     {
-        $this->workshop_id = $workshop;
+        $this->workshop = $workshop;
 
         return $this;
     }
 
+
     // EAsyAdmin - classes relationnelles
     public function __toString(): string
     {
-        return 'Atelier de ' . $this->workshop_id;
+        return 'Atelier de ' . ($this->workshop);
     }
+
 }

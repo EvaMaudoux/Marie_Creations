@@ -15,7 +15,7 @@
   font-style: italic;
 }
 
-.h4-uppercase, .profile-container .profile .edit a, .creation-container .details .creation .card-body h4, .creations .categorie-creation li, .home-container .articles .grid-container .articles-container .card-body h4, .home-container .creations .creations-container .card .card-body h4, .home-container .hero .texte-hero-container h4, .sous-titre, .btn-section, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a, .btn-desktop, footer .newsletter .inscription button, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
+.h4-uppercase, .profile-container .profile .edit a, .fc .fc-timegrid-axis-cushion, .fc .fc-timegrid-slot-label-cushion, .fc .fc-daygrid-day-number, .fc .fc-toolbar-title, .creation-container .details .creation .card-body h4, .creations .categorie-creation li, .home-container .articles .grid-container .articles-container .card-body h4, .home-container .creations .creations-container .card .card-body h4, .home-container .hero .texte-hero-container h4, .sous-titre, .btn-section, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a, .btn-desktop, footer .newsletter .inscription button, .modal .reservation a, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
   font-family: "Thasadith", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -24,7 +24,7 @@
   text-decoration: none;
 }
 
-.h2, .reset-password h1, .change-password h1, .profile-container .profile h1, .profile-container .bg-profile h1, #about > p a, .article-container .flex-container .others-articles > h2, .article-container .flex-container .article .article-header h2, .article-container .flex-container .article .article-header h1, .creation-container .details .creation .card-body h2, .home-container .articles h2, .home-container .ateliers .section-container h2, .home-container .creations h2 {
+.h2, .reset-password h1, .change-password h1, .profile-container .profile h1, .profile-container .bg-profile h1, #about > p a, .article-container .flex-container .others-articles > h2, .article-container .flex-container .article .article-header h2, .article-container .flex-container .article .article-header h1, .modal h2, .creation-container .details .creation .card-body h2, .home-container .articles h2, .home-container .ateliers .section-container h2, .home-container .creations h2 {
   font-family: "Noto Serif Display", serif;
   font-size: 40px;
   font-weight: 300;
@@ -40,7 +40,7 @@
   font-style: italic;
 }
 
-.h6-desktop, .reset-password .submit, .change-password .submit, .editProfile .submit, .contact .grid-container .contact-container .form-contact .form .submit, .register .form-register > form .submit, .register .form-login > form .submit, .login .form-register > form .submit, .login .form-login > form .submit, #about .texte-about-1 h6, .article-container .flex-container .article .comment-area .new-comment > form .submit, .article-container .flex-container .article .article-header h6, .blog-container .blog .articles-container .row-articles .article .article-texte h6, .ateliers #hero-container .hero-ateliers h6, .right-links > a, .left-links > a, .navbar a {
+.h6-desktop, .reset-password .submit, .change-password .submit, .editProfile .submit, .contact .grid-container .contact-container .form-contact .form .submit, .register .form-register > form .submit, .register .form-login > form .submit, .login .form-register > form .submit, .login .form-login > form .submit, #about .texte-about-1 h6, .article-container .flex-container .article .comment-area .new-comment > form .submit, .article-container .flex-container .article .article-header h6, .blog-container .blog .articles-container .row-articles .article .article-texte h6, .ateliers #hero-container .hero-ateliers h6, .right-links > a, .left-links > a, .navbar .dropdown-title, .navbar a {
   font-family: "Thasadith", sans-serif;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -49,7 +49,7 @@
   text-decoration: none;
 }
 
-.paragraphe-desktop, .conditions .liens p, footer .newsletter .inscription > form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .reset-password p, .change-password p, .reset-password input, .change-password input, .editProfile input, .profile-container .profile .infos p, .contact .grid-container .contact-container .form-contact .form input, .contact .grid-container .contact-container .form-contact .form textarea, .contact .grid-container .contact-container .form-contact p, .error-message, .register .form-register .btn-newsletter label, .login .form-register .btn-newsletter label, .register .form-register > form input, .register .form-login > form input, .login .form-register > form input, .login .form-login > form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .comment-area .new-comment > form textarea, .article-container .flex-container .article .comment-area .last-comments .item p, .article-container .flex-container .article .comment-area .last-comments .item h3, .article-container .flex-container .article .comment-area .last-comments .item > h2, .article-container .flex-container .article .article-body p, .article-container .flex-container .article .article-header p, .blog-container .blog .articles-container .row-articles .article .article-texte p, .ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p, .ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
+.paragraphe-desktop, .conditions .liens p, footer .newsletter .inscription > form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .reset-password p, .change-password p, .reset-password input, .change-password input, .editProfile input, .profile-container .profile .infos p, .contact .grid-container .contact-container .form-contact .form input, .contact .grid-container .contact-container .form-contact .form textarea, .contact .grid-container .contact-container .form-contact p, .error-message, .register .form-register .btn-newsletter label, .login .form-register .btn-newsletter label, .register .form-register > form input, .register .form-login > form input, .login .form-register > form input, .login .form-login > form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .comment-area .new-comment > form textarea, .article-container .flex-container .article .comment-area .last-comments .item p, .article-container .flex-container .article .comment-area .last-comments .item h3, .article-container .flex-container .article .comment-area .last-comments .item > h2, .article-container .flex-container .article .article-body p, .article-container .flex-container .article .article-header p, .blog-container .blog .articles-container .row-articles .article .article-texte p, .modal p, .fc .fc-col-header-cell-cushion, .ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p, .ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
   font-family: "Tajawal", sans-serif;
   font-weight: 200;
   font-size: 20px;
@@ -57,7 +57,7 @@
   border-radius: 0;
 }
 
-.btn-desktop, footer .newsletter .inscription button, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
+.btn-desktop, footer .newsletter .inscription button, .modal .reservation a, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
   border: none;
   color: #5E604B;
   background-color: transparent;
@@ -69,7 +69,7 @@
   transition: background-color 0.5s;
 }
 
-.btn-desktop:hover, footer .newsletter .inscription button:hover, .home-container .articles .grid-container .articles-container .card-body .btn:hover, .home-container .creations .creations-container .card .card-body .btn:hover {
+.btn-desktop:hover, footer .newsletter .inscription button:hover, .modal .reservation a:hover, .home-container .articles .grid-container .articles-container .card-body .btn:hover, .home-container .creations .creations-container .card .card-body .btn:hover {
   background-color: #5E604B;
   color: #F0EDE6;
   padding: 0.4rem 1rem;
@@ -740,6 +740,12 @@
   font-weight: bolder;
 }
 
+.ateliers .ateliers-container a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #5E604B;
+}
+
 .ateliers .ateliers-container .atelier-container:nth-child(1) {
   background-color: #F0EDE6;
 }
@@ -761,7 +767,7 @@
   color: #F0EDE6;
 }
 
-.ateliers .ateliers-container .atelier-container:nth-child(3) p {
+.ateliers .ateliers-container .atelier-container:nth-child(3) p, .ateliers .ateliers-container .atelier-container:nth-child(3) a {
   color: #F0EDE6;
 }
 
@@ -780,6 +786,114 @@
 }
 
 /* agenda des ateliers */
+#calendrier_admin, #calendar-view {
+  width: 70%;
+  margin: 4rem auto;
+}
+
+:root {
+  --fc-daygrid-event: 3rem;
+  /* custom  boutons au dessus de l'agenda */
+  --fc-button-text-color: #fff;
+  --fc-button-bg-color: #5e604b;
+  --fc-button-border-color: #5e604b;
+  --fc-button-hover-bg-color: #4b4c3b;
+  --fc-button-hover-border-color: #4b4c3b;
+  --fc-button-active-bg-color: #3a3b2e;
+  --fc-button-active-border-color: #3a3b2e;
+  /* custom  taille police des events */
+  --fc-small-font-size: 1rem;
+  /* custom  background de today */
+  --fc-today-bg-color: rgb(240, 237, 230);
+}
+
+/* custom  texte header cellules du haut */
+.fc .fc-col-header-cell-cushion {
+  color: #5E604B;
+  padding: 1rem;
+}
+
+/* custom  date de la semaine centrée en hau */
+.fc .fc-toolbar-title {
+  color: #34352A;
+  font-size: 1.5rem;
+}
+
+/* custom  numéros mois (month view) */
+.fc .fc-daygrid-day-number {
+  color: #5E604B;
+  font-weight: lighter;
+  padding: 1rem;
+}
+
+/* custom  texte event en month view */
+.fc a {
+  color: #5E604B;
+}
+
+.fc-event-main-frame {
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* custom  cellules verticales deg auche */
+.fc .fc-timegrid-axis-cushion, .fc .fc-timegrid-slot-label-cushion {
+  color: #5E604B;
+  font-weight: lighter;
+  padding: 0 0.5rem;
+}
+
+/* Styles pour la fenêtre modale des détails d'uèna telier (agenda)*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 60%; /* Centré verticalement */
+  left: 50%; /* Centré horizontalement */
+  transform: translate(-50%, -50%);
+  background-color: #F0EDE6;
+  border: 1px solid #F0EDE6;
+  z-index: 1000;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  width: 60%;
+  height: 60%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal p {
+  font-size: 18px;
+  color: #5E604B;
+}
+
+.modal h2 {
+  font-size: 27px;
+  padding: 2rem 1rem;
+  color: #34352A;
+  text-align: center;
+}
+
+.modal .intitule {
+  color: red;
+}
+
+.modal .reservation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  padding-right: 1rem;
+  color: #5E604B;
+}
+
 /*  page blog  */
 .blog-container .blog {
   color: #34352A;
@@ -1383,12 +1497,6 @@
 .contact .grid-container .contact-container .form-contact .map img {
   width: 90%;
   height: 90%;
-}
-
-/* calendar_admin */
-#calendrier_admin {
-  width: 60%;
-  margin: auto;
 }
 
 /* user profile */
