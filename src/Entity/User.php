@@ -58,7 +58,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, Seriali
     private ?bool $is_disabled = null;
 
     #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Reservation::class)]
-    private Collection $reservations;
+        private Collection $reservations;
 
     #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Comment::class)]
     private Collection $comments;
@@ -311,6 +311,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, Seriali
     // EAsyAdmin - classes relationnelles
     public function __toString(): string
     {
+
         return $this->lastName . ' ' . $this->firstName;
     }
 }

@@ -11,6 +11,8 @@
         <div id="calendar-view"></div>
     </main>
 
+    <div id="push-permission"></div>
+
     <!-- Fenêtre modale -->
     <div id="event-modal" class="modal" data-workshop-id="">
         <span class="close">&times;</span>
@@ -84,7 +86,7 @@
 
                     // Remplissage des éléments <p> avec les informations de l'atelier
                     document.getElementById('workshop-price').innerText = 'Prix : ' + price + ' euros';
-                    document.getElementById('workshop-maxCapacity').innerText = 'Nombre de places disponibles : ' + availableSeats + ' places';
+                    // document.getElementById('workshop-maxCapacity').innerText = 'Nombre de places disponibles : ' + availableSeats + ' places';
                     document.getElementById('workshop-description').innerText = 'En quoi consiste cet atelier? '  + descriptionWorkshop;
 
                     // Obtenir le texte brut de la description sans balises HTML
@@ -124,7 +126,7 @@
                             // Atelier déjà réservé
                             reservationButton.style.display = 'none';
                             reservationMessage.innerText = 'Vous avez déjà réservé cet atelier';
-                            window.location.reload();
+                            // window.location.reload();
                             return;
                         }
 

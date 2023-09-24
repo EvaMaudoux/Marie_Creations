@@ -21,7 +21,7 @@ class CreationController extends AbstractController
 
         $creations = $creationRepo -> findBy (
             [],
-            ['title' => 'ASC']
+            ['title' => 'ASC'],
         );
 
         return $this->render('creation/creations.html.twig', [

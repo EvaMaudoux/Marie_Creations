@@ -21,7 +21,7 @@ class ApiController extends AbstractController
     }
 
     #[Route('/api/{id}/edit', name: 'api_event_edit')]
-    public function majEvent(?Calendar $calendar, Request $request, EntityManagerInterface $entityManager)
+    public function majEvent(?Calendar $calendar, Request $request, EntityManagerInterface $entityManager): Response
     {
         // On récupère les données
         $donnees = json_decode($request->getContent());

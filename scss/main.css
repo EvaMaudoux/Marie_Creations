@@ -49,7 +49,7 @@
   text-decoration: none;
 }
 
-.paragraphe-desktop, .conditions .liens p, footer .newsletter .inscription > form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .reset-password p, .change-password p, .reset-password input, .change-password input, .editProfile input, .profile-container .profile .infos p, .contact .grid-container .contact-container .form-contact .form input, .contact .grid-container .contact-container .form-contact .form textarea, .contact .grid-container .contact-container .form-contact p, .error-message, .register .form-register .btn-newsletter label, .login .form-register .btn-newsletter label, .register .form-register > form input, .register .form-login > form input, .login .form-register > form input, .login .form-login > form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .comment-area .new-comment > form textarea, .article-container .flex-container .article .comment-area .last-comments .item p, .article-container .flex-container .article .comment-area .last-comments .item h3, .article-container .flex-container .article .comment-area .last-comments .item > h2, .article-container .flex-container .article .article-body p, .article-container .flex-container .article .article-header p, .blog-container .blog .articles-container .row-articles .article .article-texte p, .modal p, .fc .fc-col-header-cell-cushion, .ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p, .ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
+.paragraphe-desktop, .conditions .liens p, footer .newsletter .inscription > form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .reset-password p, .change-password p, .reset-password input, .change-password input, .editProfile input, .profile-container .profile .infos p, .profile-container .profile .infos ul, .profile-container .profile .infos li, .contact .grid-container .contact-container .form-contact .form input, .contact .grid-container .contact-container .form-contact .form textarea, .contact .grid-container .contact-container .form-contact p, .error-message, .register .form-register .btn-newsletter label, .login .form-register .btn-newsletter label, .register .form-register > form input, .register .form-login > form input, .login .form-register > form input, .login .form-login > form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .comment-area .new-comment > form textarea, .article-container .flex-container .article .comment-area .last-comments .item p, .article-container .flex-container .article .comment-area .last-comments .item h3, .article-container .flex-container .article .comment-area .last-comments .item > h2, .article-container .flex-container .article .article-body p, .article-container .flex-container .article .article-header p, .blog-container .blog .articles-container .row-articles .article .article-texte p, .modal p, .fc .fc-col-header-cell-cushion, .ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p, .ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
   font-family: "Tajawal", sans-serif;
   font-weight: 200;
   font-size: 20px;
@@ -1346,8 +1346,15 @@
 .profile-container .profile .infos {
   text-align: center;
 }
-.profile-container .profile .infos p {
+.profile-container .profile .infos p, .profile-container .profile .infos ul, .profile-container .profile .infos li {
   font-size: 23px;
+}
+.profile-container .profile .infos ul {
+  padding: 1rem 0;
+}
+.profile-container .profile .infos li {
+  color: #5E604B;
+  font-weight: lighter;
 }
 .profile-container .profile .edit p {
   text-align: center;

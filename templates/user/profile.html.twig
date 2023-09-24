@@ -18,7 +18,14 @@
                 <div class="infos">
                     <p>Adresse mail :  {{ app.user.email }}</p>
                     <p>Membre depuis le : {{ app.user.createdAt|date('d/m/Y') }}</p>
-                    <p>Réservations d'ateliers : </p>
+                    <ul>Réservations d'ateliers :<br>
+                        {% for reservations in app.user.reservations %}
+                            <li>
+                            {{ reservations.workshop }} en date du
+                            {{ reservations.workshop.start|date('d/m/Y') }}
+                            </li>
+                        {% endfor %}
+                    </ul>
                 </div>
                 <div class="edit">
                     <p><a href="{{ path('app_editProfile') }}">modifier mon profil</a></p>

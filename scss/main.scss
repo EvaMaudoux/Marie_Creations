@@ -1401,9 +1401,16 @@
     }
     .infos {
       text-align: center;
-      p {
+      p, ul, li {
         @extend .paragraphe-desktop;
         font-size: 23px;
+      }
+      ul {
+        padding: 1rem 0;
+      }
+      li {
+        color: $olive;
+        font-weight: lighter;
       }
     }
    .edit {
