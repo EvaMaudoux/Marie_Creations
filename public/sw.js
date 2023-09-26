@@ -19,7 +19,7 @@ self.addEventListener('push', (event) => {
 self.addEventListener('notificationclick', (event) => {
     event.waitUntil(
         // à modifier avec la bonne url du site
-        openUrl('https://6073-2a02-a03f-a87b-7a00-31bf-f082-19e2-e039.ngrok-free.app/ateliers/agenda')
+        openUrl('http://127.0.0.1:8000/profil/mes-reservations')
     )
 })
 
@@ -36,10 +36,9 @@ async function openUrl(url) {
         return self.clients.openWindow(url);
     }
     return null;
-
-
-
 }
+
+
 
 
 

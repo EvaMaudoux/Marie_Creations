@@ -728,8 +728,8 @@
 }
 
 
-/* Styles pour la fenêtre modale des détails d'uèna telier (agenda)*/
-.modal {
+/* Styles pour la fenêtre modale des détails d'un atelier (agenda)*/
+#event-modal {
   display: none;
   position: fixed;
   top: 60%; /* Centré verticalement */
@@ -743,7 +743,6 @@
   padding: 20px;
   width: 60%;
   height: 60%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   p {
     @extend .paragraphe-desktop;
     font-size: 18px;
@@ -1434,6 +1433,26 @@
   }
 }
 
+.my-reservations {
+  color: $olive;
+  margin-bottom: 9rem;
+  margin-left: 2rem;
+  h2 {
+    @extend .h3-italic;
+    font-size: 35px;
+    margin-bottom: 3rem;
+  }
+  p, li {
+    @extend .paragraphe-desktop;
+    font-size: 23px;
+  }
+  li {
+    margin-bottom: 1rem;
+    list-style: disc;
+    margin-left: 4rem;
+  }
+}
+
 /* edit-profile */
 .editProfile {
   .editProfileImg {
@@ -1629,6 +1648,94 @@ footer {
     }
 }
 
+.modal-notif {
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  h3 {
+    @extend .h4-uppercase;
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+  p {
+    @extend .paragraphe-desktop;
+    margin-bottom: 2rem;
+  }
+  button {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    @extend .h4-uppercase;
+    font-size: 15px;
+    padding: 1rem;
+    line-height: normal;
+  }
+}
+
+/* bouton flottant de gestion des notifications - l'utilisateur peut se désabonner des notifs à tout moment */
+.floating-button {
+  position: fixed;
+  bottom: 55px;
+  left: 45px;
+  background-color:  $blanc;
+  color: $olive;
+  border: none;
+  border-radius: 50%;
+  padding: 15px 17px;
+  cursor: pointer;
+}
+
+
+.floating-button i {
+  font-size: 1.3rem;
+}
+
+.widget {
+  background-color: $blanc;
+  color: $olive;
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  bottom: 55px;
+  left: 110px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  h5 {
+    text-align: center;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: space-around;
+    button {
+      margin-top: 10px;
+      margin-right: 5px;
+      padding: 5px 10px;
+      background-color: $olive;
+      color: $blanc;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.modal-explication-notif {
+  position: fixed;
+  bottom: 55px;
+  left: 110px;
+  width: 25%;
+  .modal-header {
+    padding: 10px;
+  }
+  h3 {
+    @extend .h4-uppercase;
+    font-size: 18px;
+  }
+  p {
+    @extend .paragraphe-desktop;
+  }
+}
 
 
 

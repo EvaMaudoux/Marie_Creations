@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Calendar;
+use App\Entity\Reservation;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -72,4 +73,5 @@ class ApiController extends AbstractController
         }
         return $this->render('admin/agenda_admin.html.twig');
     }
-}
+
+   }

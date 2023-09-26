@@ -9,12 +9,23 @@
             <h6>Agenda</h6>
         </div>
         <div id="calendar-view"></div>
+
+        <!-- Bouton flottant pour ouvrir le widget de gestion des notifications -->
+        <button id="notificationWidget" class="floating-button"><i class="fas fa-bell"></i></button>
+
+        <!-- Widget pour gérer la permission des notifications -->
+        <div id="notificationManager" class="widget">
+            <p>Vous avez <span id="statutNotifications">bloqué</span> les notifications !</p>
+            <div class="btn-container mt-4">
+                <button id="toggleNotifications" style="border-radius: 7px;">Autoriser les notifications</button>
+            </div>
+        </div>
     </main>
 
-    <div id="push-permission"></div>
+
 
     <!-- Fenêtre modale -->
-    <div id="event-modal" class="modal" data-workshop-id="">
+    <div id="event-modal" class="modal-notif" data-workshop-id="">
         <span class="close">&times;</span>
         <h2 id="event-title"></h2>
         <p id="event-date-range"></p>
@@ -180,4 +191,5 @@
             calendar.render();
         };
     </script>
+
 {% endblock %}

@@ -22,6 +22,10 @@ class SubscriptionNotif
     #[ORM\Column(length: 255)]
     private ?string $authToken = null;
 
+    #[ORM\ManyToOne(inversedBy: 'subscriptions')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $user = null;
+
 
     public function getId(): ?int
     {
@@ -60,6 +64,18 @@ class SubscriptionNotif
     public function setAuthToken(string $authToken): self
     {
         $this->authToken = $authToken;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        $this->user = $user;
 
         return $this;
     }

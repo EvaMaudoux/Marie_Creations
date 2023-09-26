@@ -15,6 +15,7 @@ use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class ReservationController extends AbstractController
 {
@@ -61,8 +62,12 @@ class ReservationController extends AbstractController
             $entityManager->persist($reservation);
             $entityManager->flush();
 
+            // Maintenant, récupérez la dernière réservation pour l'afficher dans la notification
+            $latestReservation = $reservation;
+
             // Envoyez la notification après une réservation réussie
-            $this->sendNotification($entityManager, $webPush);
+            $this->sendNotificationNewReservation($entityManager, $webPush, $user, $latestReservation);
+
 
             // Ajout de l'atelier réservé à l'utilisateur dans le stockage local
             $existingReservedWorkshopIds[] = $workshopId;
@@ -75,6 +80,7 @@ class ReservationController extends AbstractController
 
         }
     }
+
 
 
     #[Route('/profil/mes-reservations', name: 'app_my_reservations')]
@@ -94,13 +100,18 @@ class ReservationController extends AbstractController
         ]);
     }
 
+
+
     #[Route('/send-notification', name: 'send_notification')]
-    public function sendNotification(EntityManagerInterface $entityManager, WebPush $webPush): Response
+    public function sendNotificationNewReservation(EntityManagerInterface $entityManager, WebPush $webPush, UserInterface $user, Reservation $reservation): Response
     {
-        // Récupérez tous les abonnements depuis la base de données
-        $subscriptions = $entityManager->getRepository(SubscriptionNotif::class)->findAll();
-        // var_dump($subscriptions);
-        // Je m'authentifie auprès du serveur Push avec ma clé privée et ma clé publique générées
+        // Récupérez toutes les souscriptions de l'utilisateur actuel
+        $subscriptions = $entityManager->getRepository(SubscriptionNotif::class)->findBy(['user' => $user]);
+
+        if (empty($subscriptions)) {
+            return new Response(json_encode(['success' => false, 'message' => 'User is not subscribed or has no reservations.']));
+        }
+
         $auth = [
             'VAPID' => [
                 'subject' => 'mailto:contact@marie-creations.be',
@@ -111,24 +122,22 @@ class ReservationController extends AbstractController
 
         // Créez un objet WebPush
         $webPush = new WebPush($auth);
-        //var_dump($auth);
 
-        // Envoyez la notification à tous les abonnés
         foreach ($subscriptions as $subscription) {
-            // chaque notification est placée dans une file d'attente
+            $subscriptionData = [
+                'endpoint' => $subscription->getEndpoint(),
+                'publicKey' => $subscription->getPublicKey(),
+                'authToken' => $subscription->getAuthToken(),
+            ];
+
+            // Placez la notification dans la file d'attente pour chaque abonnement de l'utilisateur
             $webPush->queueNotification(
-            // récupération des données authentifiantes de chaque abonnement (de chaque utilisateur)
-                Subscription::create([
-                    'endpoint' => $subscription->getEndpoint(),
-                    'publicKey' => $subscription->getPublicKey(),
-                    'authToken' => $subscription->getAuthToken(),
-                ]),
+                Subscription::create($subscriptionData),
                 json_encode([
-                    'title' => 'Merci pour votre réservation !',
-                    'body' => 'Votre inscription à l\'atelier a bien été prise en compte et est désormais en attente de confirmation par Marie.',
+                    'title' => 'Merci pour votre réservation ' . $user->getFirstName() . '!',
+                    'body' => 'Votre inscription à l\'atelier ' . $reservation->getWorkshop()->getTitle() . ' a bien été prise en compte et est désormais en attente de confirmation par Marie.',
                 ])
             );
-            //var_dump($subscription->getEndpoint());
         }
 
         foreach ($webPush->flush() as $report) {
@@ -136,35 +145,12 @@ class ReservationController extends AbstractController
 
             if ($report->isSuccess()) {
                 var_dump("[v] Message sent successfully for subscription {$endpoint}.");
-                // var_dump($webPush);
             } else {
                 var_dump("[x] Message failed to sent for subscription : {$report->getReason()}");
             }
         }
-        return new Response(json_encode(['success' => true, 'message' => 'Notification']));
 
+        return new Response(json_encode(['success' => true, 'message' => 'Notifications sent.']));
     }
-
-
-    /* Afficher les réservations d'un utilisateur
-    #[Route('/reservations/user/{id}', name: 'reservations_for_user')]
-    public function reservationsForUser(ReservationRepository $reservationRepo, EntityManagerInterface $manager,): Response
-    {
-        $user = $this->getUser();
-        $user = $userRepository->find($id);
-
-        if (!$user) {
-            throw $this->createNotFoundException('User not found.');
-        }
-
-        $reservations = $user->getReservations();
-
-        return $this->render('reservation/list.html.twig', [
-            'user' => $user,
-            'reservations' => $reservations,
-        ]);
-    }
-    */
-
 
 }

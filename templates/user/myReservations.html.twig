@@ -4,7 +4,7 @@
 
 {% block body %}
 
-    <section id="profile">
+    <section id="mes-reservations">
         <div class="sous-titre">
             <h6>Mes réservations d'ateliers</h6>
         </div>
@@ -13,11 +13,11 @@
                 <p>Vous n'avez pas encore effectué de réservations.</p>
             {% else %}
                 <ul>
+                    <h2>Ateliers réservés </h2>
                     {% for reservation in reservations %}
                         <li>
-                            Atelier : {{ reservation.workshop.title }}
-                            Date : {{ reservation.workshop.start|date('d/m/Y') }}
-                            Statut : {{ reservation.status }}
+                            {{ reservation.workshop.start|date('d/m/Y') }} : {{ reservation.workshop.title }}.
+                            Statut de la réservation : {{ reservation.status }}
                         </li>
                     {% endfor %}
                 </ul>

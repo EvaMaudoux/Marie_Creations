@@ -10,6 +10,7 @@ use App\Entity\User;
 #[ORM\Entity(repositoryClass: ReservationRepository::class)]
 class Reservation
 {
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
