@@ -24,12 +24,12 @@ class CalendarCrudController extends AbstractCrudController
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setEntityLabelInPlural("Mes ateliers")
+            ->setEntityLabelInPlural("Mes sessions d'ateliers")
             ->setEntityLabelInSingular("atelier")
             ->setPageTitle("index","gestion de mes ateliers")
             ->setPaginatorPageSize(10)
             ->setSearchFields(['title'])
-            ->setDefaultSort(['workshop' => 'ASC']);
+            ->setDefaultSort(['start' => 'DESC']);
     }
 
 

@@ -10,7 +10,7 @@
         </div>
         <div class="my-reservations">
             {% if reservations is empty %}
-                <p>Vous n'avez pas encore effectué de réservations.</p>
+                <p>Vous n'avez pas réservé d'atelier pour le moment. Rendez-vous dans <span><a href="{{ path('app_agenda') }}">l'agenda </a></span> si vous désirez pour inscrire à un de mes cours !</p>
             {% else %}
                 <ul>
                     <h2>Ateliers réservés </h2>

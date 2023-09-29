@@ -8,6 +8,8 @@
         <div class="sous-titre">
             <h6>Agenda</h6>
         </div>
+
+        <!-- Affichage de l'agenda -->
         <div id="calendar-view"></div>
 
         <!-- Bouton flottant pour ouvrir le widget de gestion des notifications -->
@@ -22,10 +24,8 @@
         </div>
     </main>
 
-
-
-    <!-- Fenêtre modale -->
-    <div id="event-modal" class="modal-notif" data-workshop-id="">
+    <!-- Fenêtre modale de détails d'un atelier -->
+    <div class="event-modal modal-notif" data-workshop-id="">
         <span class="close">&times;</span>
         <h2 id="event-title"></h2>
         <p id="event-date-range"></p>
@@ -71,123 +71,181 @@
                 editable: false,
                 eventResizableFromStart: false,
                 selectable: false,
+
                 eventClick: function(reservation) {
-                    // Obtenez l'ID de l'utilisateur connecté
                     const userId = {{ app.user.id }};
+                    // Obtention des informations précises de l'atelier sur lequel un utilisateur clique
+                    // horaire de l'atelier
                     const startDateTime = reservation.event.start;
                     const endDateTime = reservation.event.end;
+                    const currentDate = new Date();
+                    const eventDate = startDateTime;
+                    const endDate = reservation.event.end;
+                    //  conversion format horaire de l'atelier
                     const startDate = startDateTime.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric'});
                     const startTime = startDateTime.toLocaleTimeString('fr-FR', { hour: 'numeric', minute: 'numeric' });
                     const endTime = endDateTime.toLocaleTimeString('fr-FR', { hour: 'numeric', minute: 'numeric'});
                     const eventDateRange = `Date de l'atelier : le ${startDate}, de ${startTime} à ${endTime}`;
+                    // bouton de réservation à l'atelier
                     const reservationButton = document.getElementById('reservation-btn');
                     reservationButton.setAttribute('data-workshop-id', reservation.event.id);
 
-                    // création de la fenetre modale avec détails de la réservation
-                    document.getElementById('event-title').innerText = reservation.event.title;
-                    document.getElementById('event-date-range').innerText = eventDateRange;
+                    // id de l'atelier à partir de l'attribut data-workshop-id de la fenêtre modale
+                    const workshopId = reservation.event.id;
 
-                    // Obtenir les informations de l'atelier depuis les attributs data
+                    // Obtention des informations générales de l'atelier depuis la classe Workshop
+                    // le prix de l'atelier
                     const price = reservation.event.extendedProps.price;
+                    // le nombre de personnes maximum à l'atelier
                     const maxCapacity = reservation.event.extendedProps.maxCapacity;
+                    // la description globale du type d'atelier
                     const descriptionWorkshop = reservation.event.extendedProps.descriptionWorkshop;
-                    // Obtenez les réservations associées à l'atelier depuis les attributs data
+                    // les réservations faites pour cet atelier
                     const reservations = reservation.event.extendedProps.reservations;
-                    const availableSeats = maxCapacity - reservations.length;
-
-                    // Remplissage des éléments <p> avec les informations de l'atelier
-                    document.getElementById('workshop-price').innerText = 'Prix : ' + price + ' euros';
-                    // document.getElementById('workshop-maxCapacity').innerText = 'Nombre de places disponibles : ' + availableSeats + ' places';
-                    document.getElementById('workshop-description').innerText = 'En quoi consiste cet atelier? '  + descriptionWorkshop;
-
-                    // Obtenir le texte brut de la description sans balises HTML
+                    // la description plus précise sur le cours, infos supplémentaires (formaté en texte lisible)
                     const descriptionText = document.createElement('div');
                     descriptionText.innerHTML = reservation.event.extendedProps.description;
                     const descriptionPlainText = descriptionText.textContent;
 
-                    // Ajout de la description de l'atelier (Workshop) dans la fenêtre modale
+                    // calcul du nombre de places disponibles à l'atelier
+                    let availableSeats = maxCapacity - reservations.length;
+                    let textavailableSeats;
+                    if (availableSeats < 0) {
+                        availableSeats = 0;
+                    }
+                    if (availableSeats === 0) {
+                        textavailableSeats = 'Plus de place disponible';
+                    } else {
+                        textavailableSeats = 'Nombre de places disponibles : ' + availableSeats + ' personne' + (availableSeats !== 1 ? 's' : '');
+                    }
+
+                    // Remplissage de la fenêtre modale qui s'ouvre au click d'un atelier avec les informations propres à l'atelier :
+                    // nom
+                    document.getElementById('event-title').innerText = reservation.event.title;
+                    // horaire
+                    document.getElementById('event-date-range').innerText = eventDateRange;
+                    // prix
+                    document.getElementById('workshop-price').innerText = 'Prix : ' + price + ' euros';
+                    // Nombre de places restantes
+                    document.getElementById('workshop-maxCapacity').innerText = textavailableSeats;
+                    // Description globale de ce type d'atelier (entité Workshop)
+                    document.getElementById('workshop-description').innerText = 'En quoi consiste cet atelier? '  + descriptionWorkshop;
+                    // Sujet du cours, informations supplémentaires
                     document.getElementById('event-description').innerText = 'Objet de l\'atelier : ' + descriptionPlainText;
 
-                    document.getElementById('event-modal').setAttribute('data-workshop-id', reservation.event.id);
-                    // Affichage de la fenêtre modale
-                    console.log(document.getElementById('event-modal'));
-                    document.getElementById('event-modal').style.display = 'block';
+                    // Association de l'ID de l'atelier à l'attribut data-workshop-id de la fenêtre modale pour isoler le comportement de chaque fenêtre modale
+                    const modal = document.querySelector('.event-modal');
+                    // message de remplacement du bouton de participation
+                    const reservationMessage = modal.querySelector('#reservation-message');
+                    modal.setAttribute('data-workshop-id', workshopId);
+                    console.log(modal)
 
-                    // Event clic sur le bouton "Je veux participer"
+                    // Affichage de la fenêtre modale
+                    modal.style.display = 'block';
+
+                    // Vérifications
+                    // stockage de l'id du user + id des ateliers réservés
+                    const userKey = 'user_' + {{ app.user.id }};
+                    const reservedWorkshopIds = JSON.parse(localStorage.getItem(userKey)) || [];
+
+                    // Si l'atelier a déjà été réservé par l'utilisateur
+                    if (reservedWorkshopIds.includes(workshopId)) {
+                        // bouton de résservation disparait
+                        reservationButton.style.display = 'none';
+                        // un message le remplace
+                        reservationMessage.innerHTML = 'Vous avez réservé cet atelier ! <br>Retrouvez votre inscription sur votre page <a href="{{ path("app_my_reservations") }}">mes réservations</a>.';
+                        console.log('atelier déjà réservé');
+                    } else if (availableSeats === 0) {
+                        // Si l'atelier est complet
+                        reservationButton.style.display = 'none';
+                        reservationMessage.innerText = 'Oups... Cet atelier est complet !';
+                        console.log('atelier complet');
+                    } else {
+                        // Si l'atelier est déjà passé
+                        if (currentDate > eventDate) {
+                            reservationButton.style.display = 'none';
+                            reservationMessage.style.display = 'inline';
+                            reservationMessage.innerText = 'Oups... Cet atelier a déjà eu lieu !';
+                            console.log('atelier passé');
+                        } else {
+                            // Sinon, le bouton de réservation est affiché et il n'y a pas de message
+                            reservationButton.style.display = 'block';
+                            reservationMessage.style.display = 'none';
+                        }
+                    }
+
+                    // Fonction pour mettre à jour le nombre de places disponibles
+                    function updateAvailableSeats() {
+                        // Effectuez une requête AJAX pour obtenir le nombre actuel de réservations
+                        // Assurez-vous que la route et le contrôleur Symfony pour cette requête AJAX sont correctement configurés
+                        $.ajax({
+                            type: 'GET',
+                            url: '/votre-route-ajax', // Remplacez par l'URL de votre route AJAX
+                            data: { workshopId: workshopId }, // Envoyez l'ID de l'atelier en question
+                            success: function (data) {
+                                // Mettez à jour le nombre de places disponibles
+                                let availableSeats = maxCapacity - data.reservations.length;
+                                if (availableSeats < 0) {
+                                    availableSeats = 0;
+                                }
+
+                                let textavailableSeats;
+                                if (availableSeats === 0) {
+                                    textavailableSeats = 'Plus de place disponible';
+                                } else {
+                                    textavailableSeats = 'Nombre de places disponibles : ' + availableSeats + ' personne' + (availableSeats !== 1 ? 's' : '');
+                                }
+
+                                // Mettez à jour l'affichage sur la page
+                                document.getElementById('workshop-maxCapacity').innerText = textavailableSeats;
+                            },
+                            error: function () {
+                                console.error('Erreur lors de la requête AJAX');
+                            },
+                        });
+                    }
+
+                    // Event clic sur le bouton "Je veux participer" pour faire une résservatio n'atelier
                     reservationButton.addEventListener('click', function() {
-                        console.log(reservationButton)
                         const reservationMessage = document.getElementById('reservation-message');
                         const workshopId = this.getAttribute('data-workshop-id');
                         const formData = new FormData();
-
                         formData.append('workshop_id', workshopId);
 
-                        // Vérifier si l'atelier a déjà été réservé par cet utilisateur
-                        const userKey = 'user_' + userId; // Utilisez l'ID de l'utilisateur connecté
-                        const reservedWorkshopIds = JSON.parse(localStorage.getItem(userKey)) || [];
-
-                        if (!userId) {
-                            // Utilisateur non connecté, afficher le message approprié
-                            reservationButton.style.display = 'none';
-                            reservationMessage.innerText = 'Vous devez vous connecter pour réserver un atelier.';
-                            return; // Quitter la fonction
-                        }
-
-                        if (reservedWorkshopIds.includes(workshopId)) {
-                            // Atelier déjà réservé
-                            reservationButton.style.display = 'none';
-                            reservationMessage.innerText = 'Vous avez déjà réservé cet atelier';
-                            // window.location.reload();
-                            return;
-                        }
-
-                        // Envoyer la requête AJAX
+                        // Envoi de la requête AJAX
                         fetch('/nouvelle-reservation', {
                             method: 'POST',
                             body: formData
                         })
                             .then(response => {
                                 if (response.status === 200) {
+                                    // la réservation a bien été effectuée et l'id de l'ateleir réservé s'ajoute au table des ateliers réservés pour l'utilisateur en cours
                                     reservedWorkshopIds.push(workshopId);
                                     localStorage.setItem(userKey, JSON.stringify(reservedWorkshopIds));
-                                    return response.json();
+                                    reservationButton.style.display = 'none';
+                                    reservationMessage.style.display = 'block';
+                                    reservationMessage.innerText = 'Merci pour votre inscription à cet atelier ! ';
+                                    console.log('atelier réservé avec succès');
                                 } else if (response.status === 400) {
-                                    console.log('coucou c\'est moi l\'erreur 400')
-                                    throw new Error('Vooooous avez déjà réservé cet atelier');
+                                    console.log('erreur 4000')
+                                    throw new Error('erreur 400');
                                 } else {
                                     console.log(response.status);
                                     throw new Error('Erreur lors de la requête AJAX');
                                 }
                             })
-                            .then(data => {
-                                if (data.message === 'Réservation créée avec succès') {
-                                    // Désactiver le bouton et afficher le message de confirmation
-                                    reservationButton.style.display = 'none';
-                                    reservationMessage.innerText = 'Réservation créée avec succès';
-                                    console.log('réservation de l\'atelier ' + workshopId + ' réalisée avec succès');
-                                } else if (data.message === 'Vous avez déjà réservé cet atelier') {
-                                    console.log('Vous avez déjà réservé cet atelier')
-                                    // Afficher le message d'erreur pour réservation en double
-                                    reservationMessage.innerText = 'Vooooous avez déjà réservé cet atelier';
-                                    reservationButton.style.display = 'none'; // Cacher le bouton de réservation
-                                } else {
-                                    console.error('Réponse inattendue de la requête AJAX', data);
-                                    console.log('then 3')
-                                }
-                            })
                             .catch(error => {
                                 console.error('Erreur lors de la requête AJAX', error);
-                                console.log('coucou petit catch')
+                                console.log('catch : erreur de la requête AJAX')
                             });
                     });
-
                 }
             });
-            // Gestion de la fermeture de la fenêtre modale
+            // Fermeture de la fenêtre modale
             document.querySelector('.close').addEventListener('click', function() {
-                document.getElementById('event-modal').style.display = 'none';
+                document.querySelector('.event-modal').style.display = 'none';
             });
-
+            // Affichage de l'agenda
             calendar.render();
         };
     </script>

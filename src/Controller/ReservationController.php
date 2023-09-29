@@ -68,7 +68,6 @@ class ReservationController extends AbstractController
             // Envoyez la notification après une réservation réussie
             $this->sendNotificationNewReservation($entityManager, $webPush, $user, $latestReservation);
 
-
             // Ajout de l'atelier réservé à l'utilisateur dans le stockage local
             $existingReservedWorkshopIds[] = $workshopId;
             $response = new Response(json_encode(['message' => 'Réservation créée avec succès', 'alreadyReserved' => false]), 200);
@@ -135,7 +134,7 @@ class ReservationController extends AbstractController
                 Subscription::create($subscriptionData),
                 json_encode([
                     'title' => 'Merci pour votre réservation ' . $user->getFirstName() . '!',
-                    'body' => 'Votre inscription à l\'atelier ' . $reservation->getWorkshop()->getTitle() . ' a bien été prise en compte et est désormais en attente de confirmation par Marie.',
+                    'body' => 'Votre inscription à l\'atelier " ' . $reservation->getWorkshop()->getTitle() . ' " a bien été prise en compte et est désormais en attente de confirmation par Marie.',
                 ])
             );
         }

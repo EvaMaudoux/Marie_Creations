@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Calendar;
 use App\Repository\CalendarRepository;
+use App\Repository\ReservationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -38,15 +39,18 @@ class CalendarController extends AbstractController
 
 
     #[Route('ateliers/agenda', name: 'app_agenda')]
-    public function agenda(CalendarRepository $calendar): Response
+    public function agenda(CalendarRepository $calendar, ReservationRepository $reservationRepo): Response
     {
         $events = $calendar->findAll();
         $ateliers = [];
 
-        foreach($events as $event){
+        foreach($events as $event) {
             $workshop = $event->getWorkshop();
             $price = $maxCapacity = $descriptionWorkshop = $workshopId = '';
-            $reservations = $event->getReservations();
+            $reservations = $reservationRepo->findBy(['workshop' => $event]);
+            // var_dump($reservations);
+
+
             if ($workshop) {
                 $price = $workshop->getPrice();
                 $maxCapacity = $workshop->getMaxCapacity();

@@ -8,73 +8,39 @@
             <div class="sous-titre">
                 <h6>mon blog</h6>
             </div>
-            <div class="articles-container">
-                    <div class="row-articles">
-                        <div class="article">
-                            <a href="{{ path('app_article') }}">
-                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/1.jpg') }}" alt="">
-                            </a>
-                            <div class="article-texte">
-                                <h6>peinture acrylique</h6>
-                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
-                                <p>02.10.2022</p>
+            <div class="articles-container .box-container">
+                        {% for article in articles %}
+                            <div class="article box">
+                                <a href="{{ path('app_article', {slug: article.slug}) }}">
+                                    <img style="width: 350px; height: 450px;" src="{{ asset('img/blog/') ~ article.imageName }}" alt="{{ article.title }}">
+                                </a>
+                                <div class="article-texte">
+                                    <h6>{{ article.categoryArticle }}</h6>
+                                    <h2>{{ article.title }}</h2>
+                                    <p>{{ article.createdAt|date('d/m/Y') }}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="article">
-                            <a href="">
-                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/2.jpg') }}" alt="">
-                            </a>
-                            <div class="article-texte">
-                                <h6>peinture acrylique</h6>
-                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
-                                <p>02.10.2022</p>
-                            </div>
-                        </div>
-                        <div class="article">
-                            <a href="">
-                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/3.jpg') }}" alt="">
-                            </a>
-                            <div class="article-texte">
-                                <h6>peinture acrylique</h6>
-                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
-                                <p>02.10.2022</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row-articles">
-                        <div class="article">
-                            <a href="">
-                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/4.jpg') }}" alt="">
-                            </a>
-                            <div class="article-texte">
-                                <h6>peinture acrylique</h6>
-                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
-                                <p>02.10.2022</p>
-                            </div>
-                        </div>
-                        <div class="article">
-                            <a href="">
-                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/5.jpg') }}" alt="">
-                            </a>
-                            <div class="article-texte">
-                                <h6>peinture acrylique</h6>
-                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
-                                <p>02.10.2022</p>
-                            </div>
-                        </div>
-                        <div class="article">
-                            <a href="">
-                                <img style="width: 350px; height: 450px;" src="{{ asset ('img/blog/6.jpg') }}" alt="">
-                            </a>
-                            <div class="article-texte">
-                                <h6>peinture acrylique</h6>
-                                <h2>Harmonie abstraite : Contrastes et rencontres</h2>
-                                <p>02.10.2022</p>
-                            </div>
-                        </div>
-                    </div>
+                        {% endfor %}
             </div>
-            <p><a href="">Voir plus d'articles</a></p>
+            <div type="button"  id="load-more">Voir plus d'articles</div>
         </section>
     </main>
+{% endblock %}
+{% block javascripts %}
+ <script>
+        let loadMoreBtn = document.getElementById('load-more');
+        if (loadMoreBtn) {
+            let currentItem = 3;
+            loadMoreBtn.addEventListener('click', () => {
+                let boxes = [...document.querySelectorAll('.box')];
+                for (let i = currentItem; i < currentItem + 3; i++){
+                    boxes[i].style.display = 'inline-block';
+                }
+                currentItem += 3;
+            });
+
+
+        }
+
+    </script>
 {% endblock %}

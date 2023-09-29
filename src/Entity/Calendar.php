@@ -180,6 +180,14 @@ class Calendar
         return $this->reservations;
     }
 
+    /**
+     * @return Collection<int, Reservation>
+     */
+    public function getWorkshopReservations(): Collection
+    {
+        return $this->reservations;
+    }
+
     public function addReservation(Reservation $reservation): self
     {
         if (!$this->reservations->contains($reservation)) {

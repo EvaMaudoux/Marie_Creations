@@ -29,7 +29,13 @@ class Comment
     private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\Column]
-    private ?bool $is_published = null;
+    private ?bool $is_published = false;
+
+    public function __construct()
+    {
+        // Par défaut, isPublished est défini sur false lors de la création d'un commentaire
+        $this->is_published = false;
+    }
 
     #[ORM\ManyToOne(inversedBy: 'comments')]
     #[ORM\JoinColumn(nullable: false)]
@@ -114,5 +120,11 @@ class Comment
         $this->user_id = $user_id;
 
         return $this;
+    }
+
+    // EAsyAdmin - classes relationnelles
+    public function __toString(): string
+    {
+        return $this->title;
     }
 }

@@ -58,32 +58,24 @@
             <h3 class="baseline">Gardez un œil sur les dernières actualités et événements artistiques de mon blog ! </h3>
             <div class="grid-container">
                 <div class="articles-container">
+                    {% for article in articles %}
                         <div class="card">
                             <div class="row g-0">
                                 <div class="col-md-5" >
-                                    <img style="border-radius: 0; height:350px;" src="{{ asset ('img/home/article-1.jpg') }}" class="card-img" alt="...">
+                                    <img style="border-radius: 0; height:350px;" src="{{ asset('img/blog/' ~ article.imageName) }}" class="card-img" alt="{{ article.title }}">
                                 </div>
                                 <div class="col-md-7 card-body">
-                                    <h4>événement artistique</h4>
-                                    <h3 class="card-title">Exposition des jeunes talents</h3>
-                                    <p>L'art est un formidable moyen d'expression pour les jeunes talents en quête de reconnaissance et d'épanouissement [...]</p>
-                                    <a href="{{ path('app_article') }}" class="btn btn-primary">lire l'article</a>
+                                    <h4>{{ article.categoryArticle }}</h4>
+                                    <h3 class="card-title">{{ article.title }}</h3>
+                                    <p>
+                                        {% set contentArray = article.content|split(' ') %}
+                                        {{ contentArray|slice(0, 15)|join(' ')|striptags }}{% if contentArray|length > 15 %}...{% endif %}
+                                    </p>
+                                    <a href="{{ path('app_article', {slug: article.slug}) }}" class="btn btn-primary">lire l'article</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="row g-0">
-                                <div class="col-md-5" >
-                                    <img style="border-radius: 0; height:350px;" src="{{ asset ('img/home/article-2.jpg') }}" class="card-img" alt="...">
-                                </div>
-                                <div class="col-md-7 card-body">
-                                    <h4>techniques et astuces</h4>
-                                    <h3 class="card-title">Le Craft en lumière</h3>
-                                    <p>Je vous propose d'explorer les techniques et astuces du craft. Le craft, du mot anglais signifiant "artisanat", fait référence à la conception [...]</p>
-                                    <a href="{{ path('app_article') }}" class="btn btn-primary">lire l'article</a>
-                                </div>
-                            </div>
-                        </div>
+                    {% endfor %}
                     </div>
                 </div>
             <p class="text-center"><a class="btn-section" href="{{ path('app_blog') }}">Voir mon blog</a></p>

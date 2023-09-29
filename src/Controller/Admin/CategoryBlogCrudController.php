@@ -2,24 +2,24 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\CategoryArt;
+use App\Entity\CategoryBlog;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
-class CategoryArtCrudController extends AbstractCrudController
+class CategoryBlogCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return CategoryArt::class;
+        return CategoryBlog::class;
     }
 
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setEntityLabelInPlural("Mes catégories artistiques")
-            ->setEntityLabelInSingular("catégorie artistique")
-            ->setPageTitle("index","gestion de mes catégories artistiques")
+            ->setEntityLabelInPlural("Mes catégories de blog")
+            ->setEntityLabelInSingular("catégorie")
+            ->setPageTitle("index","gestion de mes catégories de blog")
             ->setPaginatorPageSize(20)
             ->setSearchFields(['title']);
     }
@@ -27,7 +27,7 @@ class CategoryArtCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name', 'Nom de la catégorie artistique'),
+            TextField::new('name', 'Nom de la catégorie de blog'),
         ];
     }
 }

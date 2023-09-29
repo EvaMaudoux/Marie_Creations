@@ -24,7 +24,7 @@ class HomeController extends AbstractController
             3
         );
         $articles = $articleRepo -> findBy(
-            [],
+            ['is_published' => true],
             ['created_at' => 'DESC'],
             2
         );

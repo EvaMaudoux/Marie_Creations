@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.h4-desktop, footer div h1, .contact .grid-container .contact-container .form-contact h1, .register .form-register h1, .register .form-login h1, .login .form-register h1, .login .form-login h1, #about .texte-about-1 h3, .article-container .flex-container .article .article-body h3, .blog-container .blog .articles-container .row-articles .article .article-texte h2, .ateliers .atelier-container:nth-child(even) h2, .ateliers .atelier-container:nth-child(odd) h2, .ateliers #hero-container .hero-ateliers h3 {
+.h4-desktop, footer div h1, .contact .grid-container .contact-container .form-contact h1, .register .form-register h1, .register .form-login h1, .login .form-register h1, .login .form-login h1, #about .texte-about-1 h3, .article-container .article-body h1, .blog-container .blog .articles-container .article .article-texte h2, .ateliers .atelier-container:nth-child(even) h2, .ateliers .atelier-container:nth-child(odd) h2, .ateliers #hero-container .hero-ateliers h3 {
   font-family: "Noto Serif Display", serif;
   font-size: 40px;
   font-weight: 300;
@@ -7,7 +7,7 @@
   padding: 0.4rem 0 0.4rem 1rem;
 }
 
-.h5-desktop, .register .form-register h2, .register .form-login h2, .login .form-register h2, .login .form-login h2, #about .texte-about-1 p, .article-container .flex-container .article .comment-area .new-comment > h2, .article-container .flex-container .article .comment-area .last-comments > h2, .article-container .flex-container .article .article-body h4 {
+.h5-desktop, .register .form-register h2, .register .form-login h2, .login .form-register h2, .login .form-login h2, #about .texte-about-1 p, .article-container .new-comment > h2, .article-container .comment-area .last-comments > h2, .article-container .article-body h2 {
   font-family: "Noto Serif Display", serif;
   font-weight: 300;
   letter-spacing: 2px;
@@ -15,7 +15,7 @@
   font-style: italic;
 }
 
-.h4-uppercase, .modal-explication-notif h3, .modal-notif button, .modal-notif h3, .profile-container .profile .edit a, .fc .fc-timegrid-axis-cushion, .fc .fc-timegrid-slot-label-cushion, .fc .fc-daygrid-day-number, .fc .fc-toolbar-title, .creation-container .details .creation .card-body h4, .creations .categorie-creation li, .home-container .articles .grid-container .articles-container .card-body h4, .home-container .creations .creations-container .card .card-body h4, .home-container .hero .texte-hero-container h4, .sous-titre, .btn-section, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a, .btn-desktop, footer .newsletter .inscription button, #event-modal .reservation a, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
+.h4-uppercase, .modal-explication-notif h3, .modal-notif button, .modal-notif h3, .my-reservations span a, .profile-container .profile .edit a, .article-container .comment-area .last-comments .item h4, .article-container .comment-area .last-comments .item > h2, .event-modal .reservation a, .fc .fc-timegrid-axis-cushion, .fc .fc-timegrid-slot-label-cushion, .fc .fc-daygrid-day-number, .fc .fc-toolbar-title, .ateliers .ateliers-container a, .creation-container .details .creation .card-body h4, .creations .categorie-creation li, .home-container .articles .grid-container .articles-container .card-body h4, .home-container .creations .creations-container .card .card-body h4, .home-container .hero .texte-hero-container h4, .sous-titre, .btn-section, .article-container .details > p a, .blog-container .blog #load-more, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a, .btn-desktop, footer .newsletter .inscription button, .event-modal .reservation #reservation-btn, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
   font-family: "Thasadith", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -24,14 +24,14 @@
   text-decoration: none;
 }
 
-.h2, .reset-password h1, .change-password h1, .profile-container .profile h1, .profile-container .bg-profile h1, #about > p a, .article-container .flex-container .others-articles > h2, .article-container .flex-container .article .article-header h2, .article-container .flex-container .article .article-header h1, #event-modal h2, .creation-container .details .creation .card-body h2, .home-container .articles h2, .home-container .ateliers .section-container h2, .home-container .creations h2 {
+.h2, .reset-password h1, .change-password h1, .profile-container .profile h1, .profile-container .bg-profile h1, #about > p a, .article-container .flex-container .others-articles > h2, .article-container .flex-container .article .article-header h2, .article-container .flex-container .article .article-header h1, .event-modal h2, .creation-container .details .creation .card-body h2, .home-container .articles h2, .home-container .ateliers .section-container h2, .home-container .creations h2 {
   font-family: "Noto Serif Display", serif;
   font-size: 40px;
   font-weight: 300;
   letter-spacing: 2px;
 }
 
-.h3-italic, .my-reservations h2, .home-container .articles .grid-container .articles-container .card-body .card-title, .home-container .articles .baseline, .home-container .ateliers .section-container .baseline, .home-container .creations .baseline {
+.h3-italic, .my-reservations h2, .article-container .article-body em, .home-container .articles .grid-container .articles-container .card-body .card-title, .home-container .articles .baseline, .home-container .ateliers .section-container .baseline, .home-container .creations .baseline {
   font-family: "Noto Serif Display", serif;
   font-weight: 300;
   letter-spacing: 2px;
@@ -40,7 +40,7 @@
   font-style: italic;
 }
 
-.h6-desktop, .reset-password .submit, .change-password .submit, .editProfile .submit, .contact .grid-container .contact-container .form-contact .form .submit, .register .form-register > form .submit, .register .form-login > form .submit, .login .form-register > form .submit, .login .form-login > form .submit, #about .texte-about-1 h6, .article-container .flex-container .article .comment-area .new-comment > form .submit, .article-container .flex-container .article .article-header h6, .blog-container .blog .articles-container .row-articles .article .article-texte h6, .ateliers #hero-container .hero-ateliers h6, .right-links > a, .left-links > a, .navbar .dropdown-title, .navbar a {
+.h6-desktop, .reset-password .submit, .change-password .submit, .editProfile .submit, .contact .grid-container .contact-container .form-contact .form .submit, .register .form-register > form .submit, .register .form-login > form .submit, .login .form-register > form .submit, .login .form-login > form .submit, #about .texte-about-1 h6, .article-container .flex-container .article .article-header h6, .article-container .new-comment > form .form-content button, .blog-container .blog .articles-container .article .article-texte h6, .ateliers #hero-container .hero-ateliers h6, .right-links > a, .left-links > a, .navbar .dropdown-title, .navbar a {
   font-family: "Thasadith", sans-serif;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -49,7 +49,7 @@
   text-decoration: none;
 }
 
-.paragraphe-desktop, .modal-explication-notif p, .modal-notif p, .conditions .liens p, footer .newsletter .inscription > form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .reset-password p, .change-password p, .reset-password input, .change-password input, .editProfile input, .my-reservations p, .my-reservations li, .profile-container .profile .infos p, .profile-container .profile .infos ul, .profile-container .profile .infos li, .contact .grid-container .contact-container .form-contact .form input, .contact .grid-container .contact-container .form-contact .form textarea, .contact .grid-container .contact-container .form-contact p, .error-message, .register .form-register .btn-newsletter label, .login .form-register .btn-newsletter label, .register .form-register > form input, .register .form-login > form input, .login .form-register > form input, .login .form-login > form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .comment-area .new-comment > form textarea, .article-container .flex-container .article .comment-area .last-comments .item p, .article-container .flex-container .article .comment-area .last-comments .item h3, .article-container .flex-container .article .comment-area .last-comments .item > h2, .article-container .flex-container .article .article-body p, .article-container .flex-container .article .article-header p, .blog-container .blog .articles-container .row-articles .article .article-texte p, #event-modal p, .fc .fc-col-header-cell-cushion, .ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p, .ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
+.paragraphe-desktop, .modal-explication-notif p, .modal-notif p, .conditions .liens p, footer .newsletter .inscription > form input, footer .newsletter .inscription p, footer .newsletter > p, footer .navigation .liens a, .reset-password p, .change-password p, .reset-password input, .change-password input, .editProfile input, .my-reservations p, .my-reservations li, .profile-container .profile .infos p, .profile-container .profile .infos ul, .profile-container .profile .infos li, .contact .grid-container .contact-container .form-contact .form input, .contact .grid-container .contact-container .form-contact .form textarea, .contact .grid-container .contact-container .form-contact p, .error-message, .register .form-register .btn-newsletter label, .login .form-register .btn-newsletter label, .register .form-register > form input, .register .form-login > form input, .login .form-register > form input, .login .form-login > form input, .register .form-register p, .register .form-login p, .login .form-register p, .login .form-login p, #about .texte-about-2 p, .article-container .flex-container .others-articles .item h2, .article-container .flex-container .article .article-header p, .article-container .new-comment > form .form-content textarea, .article-container .new-comment > form .form-content > div > input, .article-container .new-comment h4, .article-container .comment-area .last-comments .item p, .article-container .comment-area .last-comments .item h3, .article-container .article-body li, .article-container .article-body div, .blog-container .blog .articles-container .article .article-texte p, .event-modal p, .fc .fc-col-header-cell-cushion, .ateliers .atelier-container:nth-child(even) .atelier .texte-atelier-container p, .ateliers .atelier-container:nth-child(odd) .atelier .texte-atelier-container p, .creation-container .details .creation .card-body p, .home-container .articles .grid-container .articles-container .card-body p, .home-container .ateliers .section-container .atelier-container .descr-ateliers, .home-container .creations .creations-container .card .card-body > h3, .home-container .hero .texte-hero-container p:last-child {
   font-family: "Tajawal", sans-serif;
   font-weight: 200;
   font-size: 20px;
@@ -57,7 +57,7 @@
   border-radius: 0;
 }
 
-.btn-desktop, footer .newsletter .inscription button, #event-modal .reservation a, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
+.btn-desktop, footer .newsletter .inscription button, .event-modal .reservation #reservation-btn, .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .creations .creations-container .card .card-body .btn {
   border: none;
   color: rgb(94, 96, 75);
   background-color: transparent;
@@ -69,13 +69,13 @@
   transition: background-color 0.5s;
 }
 
-.btn-desktop:hover, footer .newsletter .inscription button:hover, #event-modal .reservation a:hover, .home-container .articles .grid-container .articles-container .card-body .btn:hover, .home-container .creations .creations-container .card .card-body .btn:hover {
+.btn-desktop:hover, footer .newsletter .inscription button:hover, .event-modal .reservation #reservation-btn:hover, .home-container .articles .grid-container .articles-container .card-body .btn:hover, .home-container .creations .creations-container .card .card-body .btn:hover {
   background-color: rgb(94, 96, 75);
   color: #F0EDE6;
   padding: 0.4rem 1rem;
 }
 
-.btn-section, .article-container .details > p a, .blog-container .blog > p a, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a {
+.btn-section, .article-container .details > p a, .blog-container .blog #load-more, .creation-container .details p:last-child a, .home-container .ateliers .section-container p:last-child a, .home-container .creations p a {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
@@ -86,7 +86,7 @@
   transition: background-color 0.5s;
 }
 
-.btn-section:hover, .article-container .details > p a:hover, .blog-container .blog > p a:hover, .creation-container .details p:last-child a:hover, .home-container .ateliers .section-container p:last-child a:hover, .home-container .creations p a:hover {
+.btn-section:hover, .article-container .details > p a:hover, .blog-container .blog #load-more:hover, .creation-container .details p:last-child a:hover, .home-container .ateliers .section-container p:last-child a:hover, .home-container .creations p a:hover {
   background-color: #F0EDE6;
   padding: 0.8rem 1.6rem;
 }
@@ -530,11 +530,6 @@
 }
 
 /* page détails création */
-.creation-container .details .grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
 .creation-container .details p:last-child {
   text-align: center;
   margin: 4rem;
@@ -549,8 +544,8 @@
 }
 
 .creation-container .details .creation {
-  width: 100%;
-  grid-column: 3/11;
+  margin: 0 auto;
+  width: 40%;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -743,7 +738,8 @@
 .ateliers .ateliers-container a {
   text-decoration: none;
   font-weight: bold;
-  color: rgb(94, 96, 75);
+  color: #B6A385;
+  font-size: 21px;
 }
 
 .ateliers .ateliers-container .atelier-container:nth-child(1) {
@@ -767,7 +763,7 @@
   color: #F0EDE6;
 }
 
-.ateliers .ateliers-container .atelier-container:nth-child(3) p, .ateliers .ateliers-container .atelier-container:nth-child(3) a {
+.ateliers .ateliers-container .atelier-container:nth-child(3) p {
   color: #F0EDE6;
 }
 
@@ -844,7 +840,7 @@
 }
 
 /* Styles pour la fenêtre modale des détails d'un atelier (agenda)*/
-#event-modal {
+.event-modal {
   display: none;
   position: fixed;
   top: 60%; /* Centré verticalement */
@@ -860,27 +856,37 @@
   height: 60%;
 }
 
-#event-modal p {
+.event-modal p {
   font-size: 18px;
   color: rgb(94, 96, 75);
 }
 
-#event-modal h2 {
+.event-modal h2 {
   font-size: 27px;
   padding: 2rem 1rem;
   color: #34352A;
   text-align: center;
 }
 
-#event-modal .intitule {
+.event-modal .intitule {
   color: red;
 }
 
-#event-modal .reservation {
+.event-modal .reservation {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 2rem;
+}
+
+.event-modal .reservation a {
+  color: rgb(94, 96, 75);
+  font-size: 17px;
+}
+
+.event-modal .reservation #reservation-message {
+  font-style: italic;
+  font-size: 20px;
 }
 
 .close {
@@ -903,63 +909,215 @@
   margin: 4rem;
 }
 
-.blog-container .blog > p a {
+.blog-container .blog #load-more {
+  width: 20%;
+  margin: 4.5rem auto;
   color: rgb(94, 96, 75);
 }
 
-.blog-container .blog > p a:hover {
+.blog-container .blog #load-more:hover {
   background-color: #F0EDE6;
 }
 
 .blog-container .blog .articles-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  gap: 85px;
-  margin-top: 4rem;
-  margin-bottom: 7rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 18rem 4rem 22rem;
+  gap: 1rem;
 }
 
-.blog-container .blog .articles-container .row-articles {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  gap: 60px;
-}
-
-.blog-container .blog .articles-container .row-articles .article {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.blog-container .blog .articles-container .article {
+  padding-top: 2rem;
+  display: none;
   width: 350px;
 }
 
-.blog-container .blog .articles-container .row-articles .article .article-texte {
+.blog-container .blog .articles-container .article .article-texte {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  padding-top: 2rem;
 }
 
-.blog-container .blog .articles-container .row-articles .article .article-texte h6 {
+.blog-container .blog .articles-container .article .article-texte h6 {
   margin: 0;
 }
 
-.blog-container .blog .articles-container .row-articles .article .article-texte h2 {
+.blog-container .blog .articles-container .article .article-texte h2 {
   font-size: 26px;
   padding: 0;
   margin: 0;
 }
 
-.blog-container .blog .articles-container .row-articles .article .article-texte p {
+.blog-container .blog .articles-container .article .article-texte p {
   margin: 0;
   font-size: 17px;
 }
 
+.blog-container .blog .articles-container .box:nth-child(1), .blog-container .blog .articles-container .box:nth-child(2), .blog-container .blog .articles-container .box:nth-child(3) {
+  display: inline-block;
+}
+
 /* page article blog */
+.article-container .article-body {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.article-container .article-body div {
+  padding-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.article-container .article-body h1 {
+  padding: 0;
+  padding-bottom: 1rem;
+  font-size: 35px;
+  color: rgb(94, 96, 75);
+}
+
+.article-container .article-body h2 {
+  font-size: 25px;
+  font-style: normal;
+  color: rgb(94, 96, 75);
+}
+
+.article-container .article-body em {
+  font-size: 20px;
+}
+
+.article-container .article-body li {
+  font-size: 20px;
+}
+
+.article-container .comment-area {
+  color: rgb(94, 96, 75);
+}
+
+.article-container .comment-area .last-comments {
+  border-top: 1px solid #DBD2C3;
+  padding: 3rem 0 0 0;
+}
+
+.article-container .comment-area .last-comments > h2 {
+  font-size: 30px;
+  font-style: normal;
+  color: rgb(94, 96, 75);
+  padding-bottom: 2.5rem;
+}
+
+.article-container .comment-area .last-comments .item {
+  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.article-container .comment-area .last-comments .item > h2 {
+  letter-spacing: 1px;
+  font-size: 25px;
+  margin: 0;
+  font-weight: lighter;
+  padding-bottom: 1rem;
+}
+
+.article-container .comment-area .last-comments .item h3 {
+  letter-spacing: 1px;
+  font-size: 23px;
+  padding-bottom: 0.3rem;
+  margin: 0;
+}
+
+.article-container .comment-area .last-comments .item h4 {
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.article-container .comment-area .last-comments .item p {
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding-bottom: 1.3rem;
+  margin: 0;
+}
+
+.article-container .new-comment ul {
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+.article-container .new-comment h4 {
+  font-size: 22px;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.article-container .new-comment .error-message {
+  margin: 0;
+}
+
+.article-container .new-comment > h2 {
+  font-size: 30px;
+  font-style: normal;
+  color: rgb(94, 96, 75);
+  padding: 3rem 0 1rem 0;
+}
+
+.article-container .new-comment .btn-desktop, .article-container .new-comment footer .newsletter .inscription button, footer .newsletter .inscription .article-container .new-comment button, .article-container .new-comment .home-container .creations .creations-container .card .card-body .btn, .home-container .creations .creations-container .card .card-body .article-container .new-comment .btn, .article-container .new-comment .home-container .articles .grid-container .articles-container .card-body .btn, .home-container .articles .grid-container .articles-container .card-body .article-container .new-comment .btn, .article-container .new-comment .event-modal .reservation #reservation-btn, .event-modal .reservation .article-container .new-comment #reservation-btn {
+  margin-right: 2rem;
+}
+
+.article-container .new-comment > form .form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.article-container .new-comment > form .form-content ul, .article-container .new-comment > form .form-content li {
+  display: none;
+}
+
+.article-container .new-comment > form .form-content > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 1rem 0;
+}
+
+.article-container .new-comment > form .form-content > div > input {
+  color: rgb(94, 96, 75);
+  outline: none;
+  padding: 0.5rem;
+  padding-right: 16rem;
+  border: 1px solid #DBD2C3;
+}
+
+.article-container .new-comment > form .form-content > div > input::placeholder {
+  color: rgb(94, 96, 75);
+}
+
+.article-container .new-comment > form .form-content textarea {
+  outline: none;
+  color: rgb(94, 96, 75);
+  padding: 0.5rem;
+  padding-right: 15rem;
+  border: 1px solid #DBD2C3;
+  letter-spacing: 1px;
+}
+
+.article-container .new-comment > form .form-content textarea::placeholder {
+  color: rgb(94, 96, 75);
+}
+
+.article-container .new-comment > form .form-content button {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: rgb(94, 96, 75);
+  text-align: center;
+  color: #F0EDE6;
+}
+
 .article-container .details > p {
   text-align: center;
   margin: 4rem;
@@ -1011,123 +1169,6 @@
 
 .article-container .flex-container .article .article-header p {
   margin: 0;
-}
-
-.article-container .flex-container .article .article-body {
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
-  gap: 20px;
-}
-
-.article-container .flex-container .article .article-body p {
-  padding-bottom: 1rem;
-  letter-spacing: 1px;
-}
-
-.article-container .flex-container .article .article-body h3 {
-  padding: 0;
-  font-size: 35px;
-  color: rgb(94, 96, 75);
-}
-
-.article-container .flex-container .article .article-body h4 {
-  font-size: 25px;
-  font-style: normal;
-  color: rgb(94, 96, 75);
-}
-
-.article-container .flex-container .article .comment-area {
-  color: rgb(94, 96, 75);
-}
-
-.article-container .flex-container .article .comment-area .last-comments {
-  border-top: 1px solid #DBD2C3;
-  margin: 3rem 0 0 0;
-  padding: 4rem 0 0 0;
-}
-
-.article-container .flex-container .article .comment-area .last-comments > h2 {
-  font-size: 30px;
-  font-style: normal;
-  color: rgb(94, 96, 75);
-  padding-bottom: 2.5rem;
-}
-
-.article-container .flex-container .article .comment-area .last-comments .item {
-  padding-bottom: 2rem;
-}
-
-.article-container .flex-container .article .comment-area .last-comments .item > h2 {
-  letter-spacing: 1px;
-  font-size: 25px;
-  margin: 0;
-}
-
-.article-container .flex-container .article .comment-area .last-comments .item h3 {
-  letter-spacing: 1px;
-  font-size: 17px;
-  padding-bottom: 0.5rem;
-  margin: 0;
-}
-
-.article-container .flex-container .article .comment-area .last-comments .item p {
-  letter-spacing: 1px;
-  margin: 0;
-}
-
-.article-container .flex-container .article .comment-area .new-comment > h2 {
-  font-size: 30px;
-  font-style: normal;
-  color: rgb(94, 96, 75);
-  padding: 3rem 0 1rem 0;
-}
-
-.article-container .flex-container .article .comment-area .new-comment > form {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-.article-container .flex-container .article .comment-area .new-comment > form > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 1rem 0;
-}
-
-.article-container .flex-container .article .comment-area .new-comment > form > div > input {
-  margin-right: 1.3rem;
-  outline: none;
-  padding: 0.5rem;
-  border: 1px solid #DBD2C3;
-}
-
-.article-container .flex-container .article .comment-area .new-comment > form > div > input::placeholder {
-  color: rgb(94, 96, 75);
-}
-
-.article-container .flex-container .article .comment-area .new-comment > form textarea {
-  outline: none;
-  padding: 0.5rem;
-  border: 1px solid #DBD2C3;
-  letter-spacing: 1px;
-  margin-bottom: 3rem;
-}
-
-.article-container .flex-container .article .comment-area .new-comment > form textarea::placeholder {
-  color: rgb(94, 96, 75);
-}
-
-.article-container .flex-container .article .comment-area .new-comment > form .submit {
-  width: 25%;
-  padding: 0.7rem 0;
-  border: none;
-  background-color: rgb(94, 96, 75);
-  text-align: center;
-  color: #F0EDE6;
 }
 
 .article-container .flex-container .others-articles {
@@ -1325,7 +1366,7 @@
   text-align: center;
 }
 
-.register .form-register > form .btn-section, .register .form-register > form .home-container .creations p a, .home-container .creations p .register .form-register > form a, .register .form-register > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .register .form-register > form a, .register .form-register > form .creation-container .details p:last-child a, .creation-container .details p:last-child .register .form-register > form a, .register .form-register > form .blog-container .blog > p a, .blog-container .blog > p .register .form-register > form a, .register .form-register > form .article-container .details > p a, .article-container .details > p .register .form-register > form a, .register .form-login > form .btn-section, .register .form-login > form .home-container .creations p a, .home-container .creations p .register .form-login > form a, .register .form-login > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .register .form-login > form a, .register .form-login > form .creation-container .details p:last-child a, .creation-container .details p:last-child .register .form-login > form a, .register .form-login > form .blog-container .blog > p a, .blog-container .blog > p .register .form-login > form a, .register .form-login > form .article-container .details > p a, .article-container .details > p .register .form-login > form a, .login .form-register > form .btn-section, .login .form-register > form .home-container .creations p a, .home-container .creations p .login .form-register > form a, .login .form-register > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .login .form-register > form a, .login .form-register > form .creation-container .details p:last-child a, .creation-container .details p:last-child .login .form-register > form a, .login .form-register > form .blog-container .blog > p a, .blog-container .blog > p .login .form-register > form a, .login .form-register > form .article-container .details > p a, .article-container .details > p .login .form-register > form a, .login .form-login > form .btn-section, .login .form-login > form .home-container .creations p a, .home-container .creations p .login .form-login > form a, .login .form-login > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .login .form-login > form a, .login .form-login > form .creation-container .details p:last-child a, .creation-container .details p:last-child .login .form-login > form a, .login .form-login > form .blog-container .blog > p a, .blog-container .blog > p .login .form-login > form a, .login .form-login > form .article-container .details > p a, .article-container .details > p .login .form-login > form a {
+.register .form-register > form .btn-section, .register .form-register > form .home-container .creations p a, .home-container .creations p .register .form-register > form a, .register .form-register > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .register .form-register > form a, .register .form-register > form .creation-container .details p:last-child a, .creation-container .details p:last-child .register .form-register > form a, .register .form-register > form .blog-container .blog #load-more, .blog-container .blog .register .form-register > form #load-more, .register .form-register > form .article-container .details > p a, .article-container .details > p .register .form-register > form a, .register .form-login > form .btn-section, .register .form-login > form .home-container .creations p a, .home-container .creations p .register .form-login > form a, .register .form-login > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .register .form-login > form a, .register .form-login > form .creation-container .details p:last-child a, .creation-container .details p:last-child .register .form-login > form a, .register .form-login > form .blog-container .blog #load-more, .blog-container .blog .register .form-login > form #load-more, .register .form-login > form .article-container .details > p a, .article-container .details > p .register .form-login > form a, .login .form-register > form .btn-section, .login .form-register > form .home-container .creations p a, .home-container .creations p .login .form-register > form a, .login .form-register > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .login .form-register > form a, .login .form-register > form .creation-container .details p:last-child a, .creation-container .details p:last-child .login .form-register > form a, .login .form-register > form .blog-container .blog #load-more, .blog-container .blog .login .form-register > form #load-more, .login .form-register > form .article-container .details > p a, .article-container .details > p .login .form-register > form a, .login .form-login > form .btn-section, .login .form-login > form .home-container .creations p a, .home-container .creations p .login .form-login > form a, .login .form-login > form .home-container .ateliers .section-container p:last-child a, .home-container .ateliers .section-container p:last-child .login .form-login > form a, .login .form-login > form .creation-container .details p:last-child a, .creation-container .details p:last-child .login .form-login > form a, .login .form-login > form .blog-container .blog #load-more, .blog-container .blog .login .form-login > form #load-more, .login .form-login > form .article-container .details > p a, .article-container .details > p .login .form-login > form a {
   letter-spacing: 2.5px;
   color: rgb(94, 96, 75);
   font-size: 15px;
@@ -1542,6 +1583,7 @@
 }
 
 .profile-container .profile .infos {
+  color: rgb(94, 96, 75);
   text-align: center;
 }
 
@@ -1578,7 +1620,7 @@
 
 .my-reservations {
   color: rgb(94, 96, 75);
-  margin-bottom: 9rem;
+  margin-bottom: 14rem;
   margin-left: 2rem;
 }
 
@@ -1587,14 +1629,21 @@
   margin-bottom: 3rem;
 }
 
+.my-reservations span a {
+  color: #B6A385;
+}
+
 .my-reservations p, .my-reservations li {
   font-size: 23px;
+  text-align: center;
 }
 
 .my-reservations li {
   margin-bottom: 1rem;
   list-style: disc;
   margin-left: 4rem;
+  text-align: start;
+  padding-left: 1rem;
 }
 
 /* edit-profile */

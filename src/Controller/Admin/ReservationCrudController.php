@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Reservation;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
@@ -14,6 +15,17 @@ class ReservationCrudController extends AbstractCrudController
     public static function getEntityFqcn(): string
     {
         return Reservation::class;
+    }
+
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            ->setEntityLabelInPlural("Les inscriptions d'utilisateurs aux ateliers")
+            ->setEntityLabelInSingular("inscription")
+            ->setPageTitle("index","gestion des inscriptions aux ateliers")
+            ->setPaginatorPageSize(20)
+            ->setSearchFields(['workshop'])
+            ->setDefaultSort(['workshop' => 'DESC']);
     }
 
 
