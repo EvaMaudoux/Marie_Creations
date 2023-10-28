@@ -49,6 +49,20 @@ class DashboardController extends AbstractDashboardController
              MenuItem::linkToCrud('Voir les utilisateurs', 'fa-solid fa-eye', User::class),
         ]);
 
+        // Section catégories artistiques
+        yield MenuItem::section('Catégories artistiques', 'fa-solid fa-palette');
+        yield MenuItem::subMenu('Actions', 'fas fa-bars')->setSubItems([
+            MenuItem::linkToCrud('Voir mes catégories', 'fa-solid fa-eye', CategoryArt::class),
+            MenuItem::linkToCrud('Ajouter une nouvelle catégorie', 'fa-solid fa-plus', CategoryArt::class)->setAction(Crud::PAGE_NEW),
+        ]);
+
+        // Section créations
+        yield MenuItem::section('Créations', 'fa-solid fa-palette');
+        yield MenuItem::subMenu('Actions', 'fas fa-bars')->setSubItems([
+            MenuItem::linkToCrud('Voir mes créations', 'fa-solid fa-eye', Creation::class),
+            MenuItem::linkToCrud('Ajouter une nouvelle création', 'fa-solid fa-plus', Creation::class)->setAction(Crud::PAGE_NEW),
+        ]);
+
         // Section ateliers
         yield MenuItem::section('Ateliers', 'fa-solid fa-paintbrush');
         yield MenuItem::subMenu('Actions', 'fas fa-bars')->setSubItems([
@@ -70,19 +84,6 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Inscrire un participant', 'fa-solid fa-plus', Reservation::class)->setAction(Crud::PAGE_NEW),
            ]);
 
-        // Section catégories des créations
-        yield MenuItem::section('Catégories artistiques', 'fa-solid fa-palette');
-        yield MenuItem::subMenu('Actions', 'fas fa-bars')->setSubItems([
-            MenuItem::linkToCrud('Voir mes catégories', 'fa-solid fa-eye', CategoryArt::class),
-            MenuItem::linkToCrud('Ajouter une nouvelle catégorie', 'fa-solid fa-plus', CategoryArt::class)->setAction(Crud::PAGE_NEW),
-        ]);
-
-        // Section créations
-        yield MenuItem::section('Créations', 'fa-solid fa-palette');
-        yield MenuItem::subMenu('Actions', 'fas fa-bars')->setSubItems([
-            MenuItem::linkToCrud('Voir mes créations', 'fa-solid fa-eye', Creation::class),
-            MenuItem::linkToCrud('Ajouter une nouvelle création', 'fa-solid fa-plus', Creation::class)->setAction(Crud::PAGE_NEW),
-        ]);
 
         // Section catégories du blog
         yield MenuItem::section('Catégories du blog', 'fa-solid fa-newspaper');

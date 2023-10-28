@@ -18,15 +18,21 @@
                 <div class="infos">
                     <p>Adresse mail :  {{ app.user.email }}</p>
                     <p>Membre depuis le : {{ app.user.createdAt|date('d/m/Y') }}</p>
-                    <ul>Réservations d'ateliers :<br>
-                        {% for reservations in app.user.reservations %}
-                            <li>
-                            {{ reservations.workshop }} en date du
-                            {{ reservations.workshop.start|date('d/m/Y') }}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
+                    {% if 'ROLE_ADMIN' not in app.user.roles %}
+                        <ul><span>Réservations d'ateliers :</span><br>
+                            {% if app.user.reservations is empty %}
+                                <li>Vous ne vous êtes encore inscrit à aucun atelier.</li>
+                            {% else %}
+                                {% for reservation in app.user.reservations %}
+                                    <li>
+                                        "{{ reservation.workshop }}" en date du
+                                        {{ reservation.workshop.start|date('d/m/Y') }}
+                                    </li>
+                                {% endfor %}
+                            {% endif %}
+                        </ul>
+                    {% endif %}
+                  </div>
                 <div class="edit">
                     <p><a href="{{ path('app_editProfile') }}">modifier mon profil</a></p>
                 </div>

@@ -685,7 +685,7 @@
 
 /* agenda des ateliers */
 #calendrier_admin, #calendar-view {
-  width: 70%;
+  width: 60%;
   margin: 4rem auto;
 }
 
@@ -952,7 +952,7 @@
   color: rgb(94, 96, 75);
   outline: none;
   padding: 0.5rem;
-  padding-right: 16rem;
+  width: 35rem;
   border: 1px solid #DBD2C3;
 }
 .article-container .new-comment > form .form-content > div > input::placeholder {
@@ -962,7 +962,8 @@
   outline: none;
   color: rgb(94, 96, 75);
   padding: 0.5rem;
-  padding-right: 15rem;
+  margin-right: 15rem;
+  width: 35rem;
   border: 1px solid #DBD2C3;
   letter-spacing: 1px;
 }
@@ -1387,6 +1388,10 @@
 .profile-container .profile .infos li {
   color: rgb(94, 96, 75);
   font-weight: lighter;
+  font-style: italic;
+}
+.profile-container .profile .infos li:first-of-type {
+  padding-top: 1rem;
 }
 .profile-container .profile .edit p {
   text-align: center;
@@ -1406,7 +1411,7 @@
 
 .my-reservations {
   color: rgb(94, 96, 75);
-  margin-bottom: 14rem;
+  margin-bottom: 19rem;
   margin-left: 2rem;
 }
 .my-reservations h2 {
@@ -1515,6 +1520,7 @@
 /* footer */
 footer {
   height: 320px;
+  bottom: 0;
   background-color: rgb(94, 96, 75);
   color: #F0EDE6;
   display: flex;

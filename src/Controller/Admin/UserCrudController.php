@@ -53,7 +53,6 @@ class UserCrudController extends AbstractCrudController
                 ->setFormTypeOption('disabled', 'disabled'),
             DateTimeField::new('createdAt', 'Date d\'inscription')
                 ->hideOnForm(),
-            ArrayField::new('reservations', 'Réservations d\'ateliers'),
             ArrayField::new('roles', 'Rôle'),
 
         ];

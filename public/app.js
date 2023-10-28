@@ -138,8 +138,8 @@ async function showNotificationModal() {
                     `
                     <div class="modal-dialog modal-dialog-centered" role="document" style="margin-top: -5%;">
                         <div class="modal-content modal-notif" style="background-color: rgb(240,237,230); color: #5e604b">
-                            <h3 class="modal-title" id="notificationModalTitle">Suivez vos inscriptions en temps réel !</h3>
-                            <p>Si vous souhaitez rester au courant du statut de votre inscription à un de mes ateliers, vous pouvez autoriser les notifications. Vous recevrez une notification dès que votre réservation est confirmée</p>
+                            <h3 class="modal-title" id="notificationModalTitle">Suivez vos réservations en temps réel !</h3>
+                            <p>Vous souhaitez rester au courant de l'état de votre réservation d'atelier? Pour cela, autorisez la réception de notifications.</p>
                             <button type="button" class="btn btn-primary" style="background-color: #5e604b; color: #f0ede6; border: none" id="manage-notif">Gérer mes notifications</button>
                         </div>
                     </div>

@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\CalendarRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CalendarRepository::class)]
@@ -45,6 +46,7 @@ class Calendar
     private ?Workshop $workshop = null;
 
     #[ORM\OneToMany(mappedBy: 'workshop', targetEntity: Reservation::class)]
+    #[Assert\Unique]
     private Collection $reservations;
 
     public function __construct()

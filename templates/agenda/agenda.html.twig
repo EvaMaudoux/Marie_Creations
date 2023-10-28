@@ -28,11 +28,11 @@
     <div class="event-modal modal-notif" data-workshop-id="">
         <span class="close">&times;</span>
         <h2 id="event-title"></h2>
-        <p id="event-date-range"></p>
+        <p id="workshop-description"></p>
         <p id="event-description"></p>
+        <p id="event-date-range"></p>
         <p id="workshop-price"></p>
         <p id="workshop-maxCapacity"></p>
-        <p id="workshop-description"></p>
         <div class="reservation">
             <a href="#" id="reservation-btn">je veux participer !</a>
             <p id="reservation-message"></p>
@@ -64,8 +64,8 @@
                     week: 'Semaine',
                     day: 'Jour'
                 },
-                slotMinTime: '07:00:00',
-                slotMaxTime: '23:00:00',
+                slotMinTime: '08:00:00',
+                slotMaxTime: '22:00:00',
                 firstDay: 1,
                 events: {{ data|raw }},
                 editable: false,
@@ -100,6 +100,8 @@
                     const maxCapacity = reservation.event.extendedProps.maxCapacity;
                     // la description globale du type d'atelier
                     const descriptionWorkshop = reservation.event.extendedProps.descriptionWorkshop;
+                    // le nom du type d'atelier
+                    const workshopName = reservation.event.extendedProps.workshopName;
                     // les réservations faites pour cet atelier
                     const reservations = reservation.event.extendedProps.reservations;
                     // la description plus précise sur le cours, infos supplémentaires (formaté en texte lisible)
@@ -129,9 +131,9 @@
                     // Nombre de places restantes
                     document.getElementById('workshop-maxCapacity').innerText = textavailableSeats;
                     // Description globale de ce type d'atelier (entité Workshop)
-                    document.getElementById('workshop-description').innerText = 'En quoi consiste cet atelier? '  + descriptionWorkshop;
+                    document.getElementById('workshop-description').innerText = 'En quoi consiste les ateliers de '+ workshopName + ' ? '  + descriptionWorkshop;
                     // Sujet du cours, informations supplémentaires
-                    document.getElementById('event-description').innerText = 'Objet de l\'atelier : ' + descriptionPlainText;
+                    document.getElementById('event-description').innerText = 'Informations supplémentaires pour cet atelier : ' + descriptionPlainText;
 
                     // Association de l'ID de l'atelier à l'attribut data-workshop-id de la fenêtre modale pour isoler le comportement de chaque fenêtre modale
                     const modal = document.querySelector('.event-modal');
@@ -174,45 +176,42 @@
                         }
                     }
 
-                    // Fonction pour mettre à jour le nombre de places disponibles
-                    function updateAvailableSeats() {
-                        // Effectuez une requête AJAX pour obtenir le nombre actuel de réservations
-                        // Assurez-vous que la route et le contrôleur Symfony pour cette requête AJAX sont correctement configurés
-                        $.ajax({
-                            type: 'GET',
-                            url: '/votre-route-ajax', // Remplacez par l'URL de votre route AJAX
-                            data: { workshopId: workshopId }, // Envoyez l'ID de l'atelier en question
-                            success: function (data) {
-                                // Mettez à jour le nombre de places disponibles
-                                let availableSeats = maxCapacity - data.reservations.length;
+                    // Fonction pour mettre à jour le nombre de places disponibles sur la fenêtre modale
+                    function updateAvailableSeats(workshopId) {
+                        // requête AJAX vers l'API de mise à jour du nombre de palces dispos
+                        fetch('/maj-available-seats?workshopId=' + workshopId)
+                            .then(response => response.json())
+                            .then(data => {
+                                // On récupère les données de la réponse JSON
+                                const reservations = data.reservations;
+
+                                // Calcul du nombre de places disponibles
+                                let availableSeats = maxCapacity - reservations.length;
                                 if (availableSeats < 0) {
                                     availableSeats = 0;
                                 }
+                                let textAvailableSeats = availableSeats === 0
+                                    ? 'Plus de place disponible'
+                                    : 'Nombre de places disponibles : ' + availableSeats + ' personne' + (availableSeats !== 1 ? 's' : '');
 
-                                let textavailableSeats;
-                                if (availableSeats === 0) {
-                                    textavailableSeats = 'Plus de place disponible';
-                                } else {
-                                    textavailableSeats = 'Nombre de places disponibles : ' + availableSeats + ' personne' + (availableSeats !== 1 ? 's' : '');
-                                }
-
-                                // Mettez à jour l'affichage sur la page
-                                document.getElementById('workshop-maxCapacity').innerText = textavailableSeats;
-                            },
-                            error: function () {
-                                console.error('Erreur lors de la requête AJAX');
-                            },
-                        });
+                                // Mise à jour de l'élément HTML avec le nouveau texte
+                                document.getElementById('workshop-maxCapacity').innerText = textAvailableSeats;
+                            })
+                            .catch(error => {
+                                console.error('Erreur lors de la mise à jour des places disponibles :', error);
+                            });
                     }
 
-                    // Event clic sur le bouton "Je veux participer" pour faire une résservatio n'atelier
+                    // Event clic sur le bouton "Je veux participer" pour faire une réservation n'atelier
                     reservationButton.addEventListener('click', function() {
                         const reservationMessage = document.getElementById('reservation-message');
                         const workshopId = this.getAttribute('data-workshop-id');
                         const formData = new FormData();
                         formData.append('workshop_id', workshopId);
+                        const reservations = reservation.event.extendedProps.reservations;
+                        updateAvailableSeats(workshopId);
 
-                        // Envoi de la requête AJAX
+                        // Envoi de la requête AJAX vers le serveur
                         fetch('/nouvelle-reservation', {
                             method: 'POST',
                             body: formData

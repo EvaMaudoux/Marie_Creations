@@ -69,7 +69,7 @@
                                     <h3 class="card-title">{{ article.title }}</h3>
                                     <p>
                                         {% set contentArray = article.content|split(' ') %}
-                                        {{ contentArray|slice(0, 15)|join(' ')|striptags }}{% if contentArray|length > 15 %}...{% endif %}
+                                        {{ contentArray|slice(0, 15)|join(' ')|striptags |replace({'&nbsp;': ' '}) }}{% if contentArray|length > 15 %}...{% endif %}
                                     </p>
                                     <a href="{{ path('app_article', {slug: article.slug}) }}" class="btn btn-primary">lire l'article</a>
                                 </div>

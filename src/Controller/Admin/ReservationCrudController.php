@@ -2,7 +2,9 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\ArticleBlog;
 use App\Entity\Reservation;
+use Doctrine\ORM\EntityManagerInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
@@ -39,5 +41,18 @@ class ReservationCrudController extends AbstractCrudController
             TextField::new('status', 'Statut de la réservation'),
         ];
     }
+
+    /** Méthode du CrudAbstractController pour persister la date de création + le slug
+     * @param EntityManagerInterface $em
+     * @param $entityInstance
+     * @return void
+     */
+    public function persistEntity(EntityManagerInterface $em, $entityInstance): void
+    {
+        if(!$entityInstance instanceof Reservation) return;
+        $entityInstance->setCreatedAt(new \DateTimeImmutable());
+        parent::persistEntity($em, $entityInstance);
+    }
+
 
 }

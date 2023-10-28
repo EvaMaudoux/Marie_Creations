@@ -5,9 +5,12 @@ namespace App\Entity;
 use App\Repository\ReservationRepository;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\User;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 
 #[ORM\Entity(repositoryClass: ReservationRepository::class)]
+#[ORM\Table(name: 'reservation')]
+#[ORM\UniqueConstraint(name: 'unique_reservation', columns: ["user_id_id", "workshop_id"])]
 class Reservation
 {
 

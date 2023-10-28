@@ -663,7 +663,7 @@
 
 /* agenda des ateliers */
 #calendrier_admin, #calendar-view {
-  width: 70%;
+  width: 60%;
   margin: 4rem auto;
 }
 :root {
@@ -967,7 +967,7 @@
           color: $olive;
           outline: none;
           padding: .5rem;
-          padding-right: 16rem;
+          width: 35rem;
           border: 1px solid $beige-clair;
           &::placeholder {
             color: $olive;
@@ -981,7 +981,8 @@
         }
         color: $olive;
         padding: .5rem;
-        padding-right: 15rem;
+        margin-right: 15rem;
+        width: 35rem;
         border: 1px solid $beige-clair;
         @extend .paragraphe-desktop;
         letter-spacing: 1px;
@@ -1456,9 +1457,14 @@
       ul {
         padding: 1rem 0;
       }
+
       li {
         color: $olive;
         font-weight: lighter;
+        font-style: italic;
+        &:first-of-type {
+          padding-top: 1rem;
+        }
       }
     }
    .edit {
@@ -1484,7 +1490,7 @@
 
 .my-reservations {
   color: $olive;
-  margin-bottom: 14rem;
+  margin-bottom: 19rem;
   margin-left: 2rem;
   h2 {
     @extend .h3-italic;
@@ -1506,6 +1512,7 @@
     margin-left: 4rem;
     text-align: start;
     padding-left: 1rem;
+
   }
 }
 
@@ -1606,6 +1613,7 @@
 /* footer */
 footer {
   height: 320px;
+  bottom: 0;
   background-color: $olive;
   color: $blanc;
   display:flex;

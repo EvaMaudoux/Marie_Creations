@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Calendar;
 use App\Entity\Reservation;
+use App\Repository\ReservationRepository;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -72,6 +73,25 @@ class ApiController extends AbstractController
             return new Response('Données incomplètes', 404);
         }
         return $this->render('admin/agenda_admin.html.twig');
+    }
+
+    #[Route('/maj-available-seats', name: 'api_maj_available_seats')]
+    public function majAvailableSeats(Request $request, ReservationRepository $reservationRepo): Response
+    {
+        // Récupérez l'ID de l'atelier à partir de la requête AJAX
+        $workshopId = $request->query->get('workshopId');
+
+        // Utilisez le $workshopId pour obtenir les réservations actuelles pour cet atelier
+        // Vous devrez peut-être injecter votre repository de réservations ici
+        $reservations = $reservationRepo->findBy(['workshop' => $workshopId]);
+
+        // Créez un tableau avec les données à renvoyer au format JSON
+        $data = [
+            'reservations' => $reservations,
+        ];
+
+        // Convertissez le tableau en JSON et renvoyez-le
+        return new Response(json_encode($data));
     }
 
    }

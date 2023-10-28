@@ -20,64 +20,57 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class ReservationController extends AbstractController
 {
      #[Route('/nouvelle-reservation', name: 'app_new_reservation')]
-    public function createReservation(CalendarRepository $calendarRepository, Request $request, EntityManagerInterface $entityManager, WebPush $webPush): Response
-    {
-        $user = $this->getUser();
+     public function createReservation(CalendarRepository $calendarRepository, Request $request, EntityManagerInterface $entityManager, WebPush $webPush): Response
+     {
+         $user = $this->getUser();
+         $workshopId = $request->request->get('workshop_id');
+         $workshop = $calendarRepository->find($workshopId);
 
-        // Obtenez l'ID de l'atelier depuis la requête (ajustez selon votre logique)
-        $workshopId = $request->request->get('workshop_id');
+         if (!$workshop) {
+             return new Response(json_encode(['message' => 'Atelier introuvable']), 404);
+         }
 
-        // Récupérez l'atelier depuis la base de données
-        $workshop = $calendarRepository->find($workshopId);
+         // Vérifiez si l'utilisateur a déjà réservé cet atelier
+         if ($user instanceof User) {
+             $existingReservation = $user->getReservations()->filter(function (Reservation $reservation) use ($workshopId) {
+                 return $reservation->getWorkshop()->getId() === $workshopId;
+             });
 
-        if (!$workshop) {
-            return new Response(json_encode(['message' => 'Atelier introuvable']), 404);
-        }
+             if (!$existingReservation->isEmpty()) {
+                 return new Response(json_encode(['message' => 'Vous avez déjà réservé cet atelier', 'alreadyReserved' => true]), 400);
+             }
 
-        $existingReservation = $user->getReservations()->filter(function (Reservation $reservation) use ($workshopId) {
-            return $reservation->getWorkshop()->getId() === $workshopId;
-        });
+             // Utilisation de la transaction pour éviter la duplication
+             $entityManager->beginTransaction();
 
-        if (!$existingReservation->isEmpty()) {
-            return new Response(json_encode(['message' => 'Vous avez déjà réservé cet atelier', 'alreadyReserved' => true]), 400);
-        }
+             try {
+                 $reservation = new Reservation();
+                 $reservation->setCreatedAt(new \DateTimeImmutable());
+                 $reservation->setStatus('en attente');
+                 $reservation->setUserId($user);
+                 $reservation->setWorkshop($workshop);
+                 $workshop->addReservation($reservation);
 
-        if ($user instanceof User) {
-            // Récupérez l'atelier depuis la base de données
-            $workshop = $calendarRepository->find($workshopId);
+                 $entityManager->persist($reservation);
+                 $entityManager->flush();
 
-            if (!$workshop) {
-                return new Response(json_encode(['message' => 'Atelier introuvable']), 404);
-            }
+                 $entityManager->commit();
 
-            // Créez une nouvelle réservation
-            $reservation = new Reservation();
-            $reservation->setCreatedAt(new \DateTimeImmutable());
-            $reservation->setStatus('en attente');
-            $reservation->setUserId($user);
-            $reservation->setWorkshop($workshop);
-            $workshop->addReservation($reservation);
+                 $latestReservation = $reservation;
 
-            // Persistez et enregistrez la réservation dans la base de données
-            $entityManager->persist($reservation);
-            $entityManager->flush();
+                 $this->sendNotificationNewReservation($entityManager, $webPush, $user, $latestReservation);
 
-            // Maintenant, récupérez la dernière réservation pour l'afficher dans la notification
-            $latestReservation = $reservation;
+                 $response = new Response(json_encode(['message' => 'Réservation créée avec succès', 'alreadyReserved' => false]), 200);
+                 $response->headers->setCookie(new Cookie('reservedWorkshopIds', json_encode([$workshopId])));
 
-            // Envoyez la notification après une réservation réussie
-            $this->sendNotificationNewReservation($entityManager, $webPush, $user, $latestReservation);
-
-            // Ajout de l'atelier réservé à l'utilisateur dans le stockage local
-            $existingReservedWorkshopIds[] = $workshopId;
-            $response = new Response(json_encode(['message' => 'Réservation créée avec succès', 'alreadyReserved' => false]), 200);
-            $response->headers->setCookie(new Cookie('reservedWorkshopIds', json_encode($existingReservedWorkshopIds)));
-            return $response;
-        } else {
-            // Gérer le cas où $user n'est pas une instance de User
-            return new Response(json_encode(['message' => 'Utilisateur non connecté']), 403);
-
-        }
+                 return $response;
+             } catch (\Exception $e) {
+                 $entityManager->rollback();
+                 return new Response(json_encode(['message' => 'Une erreur s\'est produite lors de la réservation']), 500);
+             }
+         } else {
+             return new Response(json_encode(['message' => 'Utilisateur non connecté']), 403);
+         }
     }
 
 

@@ -46,7 +46,7 @@ class CalendarController extends AbstractController
 
         foreach($events as $event) {
             $workshop = $event->getWorkshop();
-            $price = $maxCapacity = $descriptionWorkshop = $workshopId = '';
+            $price = $maxCapacity = $descriptionWorkshop = $workshopId = $workshopName = '';
             $reservations = $reservationRepo->findBy(['workshop' => $event]);
             // var_dump($reservations);
 
@@ -56,6 +56,7 @@ class CalendarController extends AbstractController
                 $maxCapacity = $workshop->getMaxCapacity();
                 $descriptionWorkshop = $workshop->getDescription();
                 $workshopId = $workshop->getId();
+                $workshopName = $workshop->getName();
             }
 
             $ateliers[] = [
@@ -72,6 +73,7 @@ class CalendarController extends AbstractController
                 'maxCapacity' => $maxCapacity,
                 'descriptionWorkshop' => $descriptionWorkshop,
                 'workshopId' => $workshopId,
+                'workshopName' => $workshopName,
                 'reservations' => $reservations,
             ];
         }
