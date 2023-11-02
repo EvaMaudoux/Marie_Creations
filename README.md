@@ -40,4 +40,4 @@ Le site offre différentes interfaces pour ses utilisateurs :
 - **Système d'Agenda Interactif pour les Ateliers** :
     - Permet aux utilisateurs de consulter l'agenda des ateliers disponibles et de réserver en ligne.
 - **Notifications en Temps Réel** :
-    -
+    - Informe les participants de l'état de leurs réservations, assurant une expérience utilisateur proactive et engagée.
