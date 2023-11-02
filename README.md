@@ -3,7 +3,7 @@
 Ce projet a pour objectif de développer un site web pour permettre à une cliente, Marie, une artiste polyvalente, de présenter ses créations artistiques variées et de simplifier la gestion des inscriptions pour ses ateliers créatifs qu'elle anime à domicile.
 
 
-## 𝓒𝓸𝓷𝓽𝓮𝔁𝓽𝓮
+## Contexte
 
 Marie excelle dans des domaines artistiques tels que la peinture abstraite, la céramique, la création de bijoux, le scrapbooking et le PowerTex. Le projet vise à offrir une plateforme en ligne pour présenter son travail artistique de manière professionnelle, facilitant la découverte de ses créations pour un public plus large.
 
