@@ -1,12 +1,14 @@
 # Marie Créations
 
-Ce projet a pour objectif de développer un site web pour permettre à une cliente, Marie, une artiste polyvalente, de présenter ses créations artistiques variées et de simplifier la gestion des inscriptions pour ses ateliers créatifs à domicile.
+Ce projet a pour objectif de développer un site web pour permettre à une cliente, Marie, une artiste polyvalente, de présenter ses créations artistiques variées et de simplifier la gestion des inscriptions pour ses ateliers créatifs qu'elle anime à domicile.
+
 
 ## 𝓒𝓸𝓷𝓽𝓮𝔁𝓽𝓮
 
 Marie excelle dans des domaines artistiques tels que la peinture abstraite, la céramique, la création de bijoux, le scrapbooking et le PowerTex. Le projet vise à offrir une plateforme en ligne pour présenter son travail artistique de manière professionnelle, facilitant la découverte de ses créations pour un public plus large.
 
-## 𝓣𝓮𝓬𝓱𝓷𝓸𝓵𝓸𝓰𝓲𝓮𝓼 𝓤𝓽𝓲𝓵𝓲𝓼𝓮́𝓮𝓼
+
+## Technologies utilisées
 
 Le développement du site a impliqué l'utilisation des technologies suivantes :
 
@@ -22,17 +24,18 @@ Le développement du site a impliqué l'utilisation des technologies suivantes :
 - **Notifications en Temps Réel** :
     - Mise en place d'un **Service Worker** en JavaScript pour permettre l'envoi de notifications aux utilisateurs concernant l'état de leurs réservations.
 
-## 𝓘𝓷𝓽𝓮𝓻𝓯𝓪𝓬𝓮𝓼
+## Interfaces
 
 Le site offre différentes interfaces pour ses utilisateurs :
 - **Interface Visiteur** :
-    - Présentation des créations artistiques variées de Marie, offrant une expérience utilisateur fluide et immersive.
+       - Présentation des créations artistiques variées de Marie, offrant une expérience utilisateur fluide et immersive.
+    - **Espace Blog** : Marie partage ses réflexions, inspirations et coulisses de son processus créatif.
 - **Espace Client** :
     - Permet aux utilisateurs de s'inscrire en ligne aux ateliers créatifs proposés par Marie.
 - **Espace Administrateur** :
     - Interface d'administration pour Marie, lui permettant de gérer aisément le contenu du site, ajouter de nouvelles créations ou gérer les ateliers.
 
-## 𝓕𝓸𝓷𝓬𝓽𝓲𝓸𝓷𝓷𝓪𝓵𝓲𝓽𝓮́𝓼 𝓒𝓵𝓮́𝓼
+## Fonctionnalités clé
 
 - **Système d'Agenda Interactif pour les Ateliers** :
     - Permet aux utilisateurs de consulter l'agenda des ateliers disponibles et de réserver en ligne.
